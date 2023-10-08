@@ -178,294 +178,294 @@ combo_ro_##NAME##HOST_LAYOUT { \
         
         combo_shft_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <37 16>;
+            key-positions = <40 19>;
             bindings = <&skq LSHFT>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_shft_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <32 13>;
+            key-positions = <37 16>;
             bindings = <&skq LSHFT>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_ctrl_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <37 17>;
+            key-positions = <40 20>;
             bindings = <&skq LCTRL>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_ctrl_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <32 12>;
+            key-positions = <37 15>;
             bindings = <&skq LCTRL>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_alt_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <37 18>;
+            key-positions = <40 21>;
             bindings = <&skq LALT>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_alt_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <32 11>;
+            key-positions = <37 14>;
             bindings = <&skq LALT>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         }; 
         combo_gui_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <37 19>;
+            key-positions = <40 13>;
             bindings = <&skq LGUI>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_gui_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <32 10>;
+            key-positions = <37 10>;
             bindings = <&skq LGUI>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_globe_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <37 15>;
+            key-positions = <40 18>;
             bindings = <&skq GLOBE>;
             layers = <MHU_LAYER_SET>;
         };
         combo_globe_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <32 14>;
+            key-positions = <37 17>;
             bindings = <&skq GLOBE>;
             layers = <MHU_LAYER_SET>;
         };
 
         combo_to_wen_base_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 13>;
+            key-positions = <36 16>;
             bindings = <&to WEN_BASE>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_base_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 16>;
+            key-positions = <41 19>;
             bindings = <&to WEN_BASE>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_nav_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 12>;
+            key-positions = <36 15>;
             bindings = <&to WEN_NAV>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_nav_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 17>;
+            key-positions = <41 20>;
             bindings = <&to WEN_NAV>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_num_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 11>;
+            key-positions = <36 14>;
             bindings = <&to WEN_NUM>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_num_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 18>;
+            key-positions = <41 21>;
             bindings = <&to WEN_NUM>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_sym_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 10>;
+            key-positions = <36 13>;
             bindings = <&to WEN_SYM>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_sym_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 19>;
+            key-positions = <41 22>;
             bindings = <&to WEN_SYM>;
             layers = <WEN_LAYER_SET>;
         };
 
         combo_to_wen_diaresis_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 23>;
+            key-positions = <36 28>;
             bindings = <&to WEN_DL>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_diaresis_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 26>;
+            key-positions = <41 31>;
             bindings = <&to WEN_DL>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_acute_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 22>;
+            key-positions = <36 27>;
             bindings = <&to WEN_AL>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_acute_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 27>;
+            key-positions = <41 32>;
             bindings = <&to WEN_AL>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_dacute_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 21>;
+            key-positions = <36 26>;
             bindings = <&to WEN_DAL>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_dacute_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 28>;
+            key-positions = <41 33>;
             bindings = <&to WEN_DAL>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_taipo_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 02>;
+            key-positions = <36 03>;
             bindings = <&to WEN_TAIPO>;
             layers = <WEN_LAYER_SET>;
         };
         combo_to_wen_taipo_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 07>;
+            key-positions = <41 8>;
             bindings = <&to WEN_TAIPO>;
             layers = <WEN_LAYER_SET>;
         };
 
         combo_to_whu_base_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 13>;
+            key-positions = <36 16>;
             bindings = <&to WHU_BASE>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_base_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 16>;
+            key-positions = <41 19>;
             bindings = <&to WHU_BASE>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_nav_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 12>;
+            key-positions = <36 15>;
             bindings = <&to WHU_NAV>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_nav_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 17>;
+            key-positions = <41 20>;
             bindings = <&to WHU_NAV>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_num_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 11>;
+            key-positions = <36 14>;
             bindings = <&to WHU_NUM>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_num_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 18>;
+            key-positions = <41 21>;
             bindings = <&to WHU_NUM>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_sym_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 10>;
+            key-positions = <36 13>;
             bindings = <&to WHU_SYM>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_sym_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 19>;
+            key-positions = <41 22>;
             bindings = <&to WHU_SYM>;
             layers = <WHU_LAYER_SET>;
         };
 
         combo_to_whu_diaresis_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 23>;
+            key-positions = <36 28>;
             bindings = <&to WHU_DL>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_diaresis_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 26>;
+            key-positions = <41 31>;
             bindings = <&to WHU_DL>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_acute_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 22>;
+            key-positions = <36 27>;
             bindings = <&to WHU_AL>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_acute_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 27>;
+            key-positions = <41 32>;
             bindings = <&to WHU_AL>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_dacute_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 21>;
+            key-positions = <36 26>;
             bindings = <&to WHU_DAL>;
             layers = <WHU_LAYER_SET>;
         };
         combo_to_whu_dacute_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 28>;
+            key-positions = <41 33>;
             bindings = <&to WHU_DAL>;
             layers = <WHU_LAYER_SET>;
         };
-        
+
         combo_enter_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <21 22 23>;
-            bindings = <&kp RET>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
-        };
-        combo_enter_right {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <26 27 28>;
             bindings = <&kp RET>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
+        combo_enter_right {
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <31 32 33>;
+            bindings = <&kp RET>;
+            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+        };
         combo_tab_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <11 12 13>;
+            key-positions = <14 15 16>;
             bindings = <&kp TAB>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_tab_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <16 17 18>;
+            key-positions = <19 20 21>;
             bindings = <&kp TAB>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_esc_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 21 22 23>;
+            key-positions = <36 26 27 28>;
             bindings = <&kp ESC>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_esc_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 26 27 28>;
+            key-positions = <41 31 32 33>;
             bindings = <&kp ESC>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_del_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 11 12 13>;
+            key-positions = <36 14 15 16>;
             bindings = <&kp DEL>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_del_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <38 16 17 18>;
+            key-positions = <41 19 20 21>;
             bindings = <&kp DEL>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
