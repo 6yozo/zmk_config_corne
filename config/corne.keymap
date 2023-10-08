@@ -477,10 +477,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         system_layer {
 // SYSTEM
             bindings = <
-    &none       &none        &none         &none          &none           &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI
-    &bt BT_CLR  &none        &to MHU_BASE  &to WHU_BASE   &none           &kp EP_TOG       &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT
-    &none       &none        &none         &to WEN_BASE   &none           &out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3
-    &kp N1      &key_repeat  &kp SPACE     &kp SEMI       &kp N2          &kp N3           &kp MINUS        &kp BSPC         &star_excl       &kp N4
+    &none    &none       &none        &none         &none          &none           &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI    &none
+    &none    &bt BT_CLR  &none        &to MHU_BASE  &to WHU_BASE   &none           &kp EP_TOG       &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT         &none
+    &none    &none       &none        &none         &to WEN_BASE   &none           &out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3       &none
+    &none    &kp N1      &key_repeat  &kp SPACE     &kp SEMI       &kp N2          &kp N3           &kp MINUS        &kp BSPC         &star_excl       &kp N4             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -489,10 +489,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_base_layer {
 // COLEMAK-DH
             bindings = <
-    &kp Q   &kp W        &kp F      &kp P     &kp B           &kp J   &kp L      &kp U        &kp Y       &kp SQT
-    &kp A   &kp R        &kp S      &kp T     &kp G           &kp M   &kp N      &kp E        &kp I       &kp O
-    &kp Z   &kp X        &kp C      &kp D     &kp V           &kp K   &kp H      &comma_lpar  &dot_rpar   &kp FSLH
-    &kp N1  &key_repeat  &kp SPACE  &kp SEMI  &kp N2          &kp N3  &kp MINUS  &kp BSPC     &star_excl  &kp N4
+    &none    &kp Q   &kp W        &kp F      &kp P     &kp B           &kp J   &kp L      &kp U        &kp Y       &kp SQT     &none
+    &none    &kp A   &kp R        &kp S      &kp T     &kp G           &kp M   &kp N      &kp E        &kp I       &kp O       &none
+    &none    &kp Z   &kp X        &kp C      &kp D     &kp V           &kp K   &kp H      &comma_lpar  &dot_rpar   &kp FSLH    &none
+    &none    &kp N1  &key_repeat  &kp SPACE  &kp SEMI  &kp N2          &kp N3  &kp MINUS  &kp BSPC     &star_excl  &kp N4      &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -501,10 +501,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_nav_layer {
 // WEN_NAV
             bindings = <
-    &to SYSTEM  &to WEN_TAIPO  &kp K_APP    &none         &kp KP_NUMLOCK          &kp INS       &none      &none      &none       &none
-    &kp LGUI    &kp LALT       &kp LCTRL    &kp LSHFT     &caps_word              &kp CAPS      &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT
-    &m_undo     &m_cut_wen     &m_copy_wen  &m_paste_wen  &m_again_wen            &kp LC(BSPC)  &kp HOME   &kp PG_DN  &kp PG_UP   &kp END
-    &kp N1      &key_repeat    &kp SPACE    &kp SEMI      &kp N2                  &kp N3        &kp MINUS  &kp BSPC   &star_excl  &kp N4
+    &none    &to SYSTEM  &to WEN_TAIPO  &kp K_APP    &none         &kp KP_NUMLOCK          &kp INS       &none      &none      &none       &none        &none
+    &none    &kp LGUI    &kp LALT       &kp LCTRL    &kp LSHFT     &caps_word              &kp CAPS      &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT    &none
+    &none    &m_undo     &m_cut_wen     &m_copy_wen  &m_paste_wen  &m_again_wen            &kp LC(BSPC)  &kp HOME   &kp PG_DN  &kp PG_UP   &kp END      &none
+    &none    &kp N1      &key_repeat    &kp SPACE    &kp SEMI      &kp N2                  &kp N3        &kp MINUS  &kp BSPC   &star_excl  &kp N4       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -513,10 +513,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_num_layer {
 // WEN_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
             bindings = <
-    &kp N6    &kp N7       &kp N8           &kp N9    &kp FSLH          &kp F12    &kp F9     &kp F8     &kp F7      &kp F6            
-    &kp N0    &kp N1       &kp N2           &kp N3    &kp PLUS          &kp F11    &kp F3     &kp F2     &kp F1      &kp F10         
-    &kp N4    &kp SLCK     &kp PAUSE_BREAK  &kp N5    &kp STAR          &kp PSCRN  &kp F5     &kp COMMA  &kp DOT     &kp F4       
-    &kp N1    &key_repeat  &kp SPACE        &kp SEMI  &kp N2            &kp N3     &kp MINUS  &kp BSPC   &star_excl  &kp N4
+    &none    &kp N6    &kp N7       &kp N8           &kp N9    &kp FSLH          &kp F12    &kp F9     &kp F8     &kp F7      &kp F6     &none
+    &none    &kp N0    &kp N1       &kp N2           &kp N3    &kp PLUS          &kp F11    &kp F3     &kp F2     &kp F1      &kp F10    &none         
+    &none    &kp N4    &kp SLCK     &kp PAUSE_BREAK  &kp N5    &kp STAR          &kp PSCRN  &kp F5     &kp COMMA  &kp DOT     &kp F4     &none      
+    &none    &kp N1    &key_repeat  &kp SPACE        &kp SEMI  &kp N2            &kp N3     &kp MINUS  &kp BSPC   &star_excl  &kp N4     &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -525,10 +525,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_sym_layer {
 // WEN_SYM
             bindings = <
-    &kp GRAVE  &kp LT       &kp GT     &kp DQT    &kp DOT            &kp AMPS   &m_scope   &kp LBKT  &kp RBKT    &kp PRCNT
-    &kp EXCL   &kp MINUS    &kp PLUS   &kp EQUAL  &kp HASH           &kp PIPE   &kp COLON  &kp LPAR  &kp RPAR    &kp QMARK
-    &kp CARET  &kp FSLH     &kp STAR   &kp BSLH   &m_par_dir         &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC    &kp AT
-    &kp N1     &key_repeat  &kp SPACE  &kp SEMI   &kp N2             &kp N3     &kp MINUS  &kp BSPC  &star_excl  &kp N4
+    &none    &kp GRAVE  &kp LT       &kp GT     &kp DQT    &kp DOT            &kp AMPS   &m_scope   &kp LBKT  &kp RBKT    &kp PRCNT    &none
+    &none    &kp EXCL   &kp MINUS    &kp PLUS   &kp EQUAL  &kp HASH           &kp PIPE   &kp COLON  &kp LPAR  &kp RPAR    &kp QMARK    &none
+    &none    &kp CARET  &kp FSLH     &kp STAR   &kp BSLH   &m_par_dir         &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC    &kp AT       &none
+    &none    &kp N1     &key_repeat  &kp SPACE  &kp SEMI   &kp N2             &kp N3     &kp MINUS  &kp BSPC  &star_excl  &kp N4       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -537,10 +537,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_acute_layer {
 // ACUTE LAYER
             bindings = <
-    &to WEN_BASE     &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_acute_to_wen  &to WEN_BASE     &to WEN_BASE
-    &a_acute_to_wen  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &e_acute_to_wen  &i_acute_to_wen  &o_acute_to_wen
-    &to WEN_BASE     &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE     &to WEN_BASE     &to WEN_BASE
-    &to WEN_BASE     &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE     &to WEN_BASE     &to WEN_BASE
+    &none    &to WEN_BASE     &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_acute_to_wen  &to WEN_BASE     &to WEN_BASE       &none
+    &none    &a_acute_to_wen  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &e_acute_to_wen  &i_acute_to_wen  &o_acute_to_wen    &none
+    &none    &to WEN_BASE     &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE     &to WEN_BASE     &to WEN_BASE       &none
+    &none    &to WEN_BASE     &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE     &to WEN_BASE     &to WEN_BASE       &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -549,10 +549,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_dacute_layer {
 // DOUBLE ACUTE LAYER
             bindings = <
-    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_dacute_to_wen  &to WEN_BASE  &to WEN_BASE
-    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE      &to WEN_BASE  &o_dacute_to_wen
-    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE      &to WEN_BASE  &to WEN_BASE
-    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE      &to WEN_BASE  &to WEN_BASE
+    &none    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_dacute_to_wen  &to WEN_BASE  &to WEN_BASE        &none
+    &none    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE      &to WEN_BASE  &o_dacute_to_wen    &none
+    &none    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE      &to WEN_BASE  &to WEN_BASE        &none
+    &none    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE      &to WEN_BASE  &to WEN_BASE        &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -561,10 +561,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_diaresis_layer {
 // DIARESIS LAYER
             bindings = <
-    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_diaresis_to_wen  &to WEN_BASE  &to WEN_BASE
-    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE        &to WEN_BASE  &o_diaresis_to_wen
-    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE        &to WEN_BASE  &to WEN_BASE
-    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE        &to WEN_BASE  &to WEN_BASE
+    &none    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_diaresis_to_wen  &to WEN_BASE  &to WEN_BASE        &none
+    &none    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE        &to WEN_BASE  &o_diaresis_to_wen  &none
+    &none    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE        &to WEN_BASE  &to WEN_BASE        &none
+    &none    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE        &to WEN_BASE  &to WEN_BASE        &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -573,10 +573,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_taipo_layer {
 // TAIPO LAYER
             bindings = <
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -585,10 +585,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_base_layer {
 // COLEMAK-DH
             bindings = <
-    &kp Q   &kp W        &kp F      &kp P            &kp B           &kp J   &kp L     &kp U            &kp Z           &sqt_dqt_whu
-    &kp A   &kp R        &kp S      &kp T            &kp G           &kp M   &kp N     &kp E            &kp I           &kp O
-    &kp Y   &kp X        &kp C      &kp D            &kp V           &kp K   &kp H     &comma_lpar_whu  &dot_rpar_whu   &fslh_qmark_whu
-    &kp N1  &key_repeat  &kp SPACE  &semi_colon_whu  &kp N2          &kp N3  &kp FSLH  &kp BSPC         &star_excl_whu  &kp N4
+    &none    &kp Q   &kp W        &kp F      &kp P            &kp B           &kp J   &kp L     &kp U            &kp Z           &sqt_dqt_whu       &none
+    &none    &kp A   &kp R        &kp S      &kp T            &kp G           &kp M   &kp N     &kp E            &kp I           &kp O              &none
+    &none    &kp Y   &kp X        &kp C      &kp D            &kp V           &kp K   &kp H     &comma_lpar_whu  &dot_rpar_whu   &fslh_qmark_whu    &none
+    &none    &kp N1  &key_repeat  &kp SPACE  &semi_colon_whu  &kp N2          &kp N3  &kp FSLH  &kp BSPC         &star_excl_whu  &kp N4             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -597,10 +597,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_nav_layer {
 // WHU_NAV
             bindings = <
-    &to SYSTEM  &to WHU_TAIPO  &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none
-    &kp LGUI    &kp LALT       &kp LCTRL    &kp LSHFT        &caps_word              &kp CAPS      &kp LEFT          &kp DOWN   &kp UP          &kp RIGHT
-    &m_undo     &m_cut_whu     &m_copy_whu  &m_paste_whu     &m_again_whu            &kp LC(BSPC)  &kp HOME          &kp PG_DN  &kp PG_UP       &kp END
-    &kp N1      &key_repeat    &kp SPACE    &semi_colon_whu  &kp N2                  &kp N3        &minus_under_whu  &kp BSPC   &star_excl_whu  &kp N4
+    &none    &to SYSTEM  &to WHU_TAIPO  &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none        &none
+    &none    &kp LGUI    &kp LALT       &kp LCTRL    &kp LSHFT        &caps_word              &kp CAPS      &kp LEFT          &kp DOWN   &kp UP          &kp RIGHT    &none
+    &none    &m_undo     &m_cut_whu     &m_copy_whu  &m_paste_whu     &m_again_whu            &kp LC(BSPC)  &kp HOME          &kp PG_DN  &kp PG_UP       &kp END      &none
+    &none    &kp N1      &key_repeat    &kp SPACE    &semi_colon_whu  &kp N2                  &kp N3        &minus_under_whu  &kp BSPC   &star_excl_whu  &kp N4       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -609,10 +609,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_num_layer {
 // WHU_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
             bindings = <
-    &kp N6     &kp N7       &kp N8           &kp N9           &kp CARET            &kp F12    &kp F9            &kp F8     &kp F7          &kp F6
-    &kp GRAVE  &kp N1       &kp N2           &kp N3           &kp HASH             &kp F11    &kp F3            &kp F2     &kp F1          &kp F10
-    &kp N4     &kp SLCK     &kp PAUSE_BREAK  &kp N5           &m_star_whu          &kp PSCRN  &kp F5            &kp COMMA  &kp DOT         &kp F4
-    &kp N1     &key_repeat  &kp SPACE        &semi_colon_whu  &kp N2               &kp N3     &minus_under_whu  &kp BSPC   &star_excl_whu  &kp N4
+    &none    &kp N6     &kp N7       &kp N8           &kp N9           &kp CARET            &kp F12    &kp F9            &kp F8     &kp F7          &kp F6     &none
+    &none    &kp GRAVE  &kp N1       &kp N2           &kp N3           &kp HASH             &kp F11    &kp F3            &kp F2     &kp F1          &kp F10    &none
+    &none    &kp N4     &kp SLCK     &kp PAUSE_BREAK  &kp N5           &m_star_whu          &kp PSCRN  &kp F5            &kp COMMA  &kp DOT         &kp F4     &none
+    &none    &kp N1     &key_repeat  &kp SPACE        &semi_colon_whu  &kp N2               &kp N3     &minus_under_whu  &kp BSPC   &star_excl_whu  &kp N4     &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -621,10 +621,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_sym_layer {
 // WHU_SYM
             bindings = <
-    &m_grave_whu          &m_lt_whu    &m_gt_whu    &m_dqt_whu     &kp DOT                 &m_amps_whu   &m_scope_whu      &m_lbkt_whu  &m_rbkt_whu     &m_prcnt_whu
-    &m_excl_whu           &kp FSLH     &m_plus_whu  &m_equal_whu   &m_hash_whu             &m_pipe_whu   &m_colon_whu      &m_lpar_whu  &m_rpar_whu     &m_qmark_whu
-    &carethulc_caret_whu  &m_fslh_whu  &m_star_whu  &m_bslh_whu    &m_par_dir_whu          &m_tilde_whu  &m_dllr_whu       &m_lbrc_whu  &m_rbrc_whu     &m_at_whu
-    &kp N1                &key_repeat  &kp SPACE  &semi_colon_whu  &kp N2                  &kp N3        &minus_under_whu  &kp BSPC     &star_excl_whu  &kp N4
+    &none    &m_grave_whu          &m_lt_whu    &m_gt_whu    &m_dqt_whu     &kp DOT                 &m_amps_whu   &m_scope_whu      &m_lbkt_whu  &m_rbkt_whu     &m_prcnt_whu    &none
+    &none    &m_excl_whu           &kp FSLH     &m_plus_whu  &m_equal_whu   &m_hash_whu             &m_pipe_whu   &m_colon_whu      &m_lpar_whu  &m_rpar_whu     &m_qmark_whu    &none
+    &none    &carethulc_caret_whu  &m_fslh_whu  &m_star_whu  &m_bslh_whu    &m_par_dir_whu          &m_tilde_whu  &m_dllr_whu       &m_lbrc_whu  &m_rbrc_whu     &m_at_whu       &none
+    &none    &kp N1                &key_repeat  &kp SPACE  &semi_colon_whu  &kp N2                  &kp N3        &minus_under_whu  &kp BSPC     &star_excl_whu  &kp N4          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -633,10 +633,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_acute_layer {
 // ACUTE LAYER
             bindings = <
-    &to WHU_BASE       &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_acute_to_whu  &to WHU_BASE       &to WHU_BASE
-    &m_a_acute_to_whu  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_e_acute_to_whu  &m_i_acute_to_whu  &m_o_acute_to_whu
-    &to WHU_BASE       &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE       &to WHU_BASE       &to WHU_BASE
-    &to WHU_BASE       &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE       &to WHU_BASE       &to WHU_BASE
+    &none  &to WHU_BASE       &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_acute_to_whu  &to WHU_BASE       &to WHU_BASE       &none
+    &none  &m_a_acute_to_whu  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_e_acute_to_whu  &m_i_acute_to_whu  &m_o_acute_to_whu  &none  
+    &none  &to WHU_BASE       &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE       &to WHU_BASE       &to WHU_BASE       &none
+    &none  &to WHU_BASE       &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE       &to WHU_BASE       &to WHU_BASE       &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -645,10 +645,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_dacute_layer {
 // DOUBLE ACUTE LAYER
             bindings = <
-    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_dacute_to_whu  &to WHU_BASE  &to WHU_BASE
-    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE        &to WHU_BASE  &m_o_dacute_to_whu
-    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE        &to WHU_BASE  &to WHU_BASE
-    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE        &to WHU_BASE  &to WHU_BASE
+    &none    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_dacute_to_whu  &to WHU_BASE  &to WHU_BASE          &none
+    &none    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE        &to WHU_BASE  &m_o_dacute_to_whu    &none
+    &none    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE        &to WHU_BASE  &to WHU_BASE          &none
+    &none    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE        &to WHU_BASE  &to WHU_BASE          &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -657,10 +657,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_diaresis_layer {
 // DIARESIS LAYER
             bindings = <
-    &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_diaresis_to_whu  &to WHU_BASE  &to WHU_BASE
-    &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE          &to WHU_BASE  &m_o_diaresis_to_whu
-    &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE          &to WHU_BASE  &to WHU_BASE
-    &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE          &to WHU_BASE  &to WHU_BASE
+    &none  &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_diaresis_to_whu  &to WHU_BASE  &to WHU_BASE          &none
+    &none  &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE          &to WHU_BASE  &m_o_diaresis_to_whu  &none
+    &none  &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE          &to WHU_BASE  &to WHU_BASE          &none
+    &none  &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE          &to WHU_BASE  &to WHU_BASE          &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -669,10 +669,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_taipo_layer {
 // TAIPO LAYER
             bindings = <
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -681,10 +681,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_base_layer {
 // COLEMAK-DH
             bindings = <
-    &kp Q   &kp W        &kp F      &kp P            &kp B           &kp J   &kp L             &kp U            &kp Z           &sqt_dqt_mhu
-    &kp A   &kp R        &kp S      &kp T            &kp G           &kp M   &kp N             &kp E            &kp I           &kp O
-    &kp Y   &kp X        &kp C      &kp D            &kp V           &kp K   &kp H             &comma_lpar_mhu  &dot_rpar_mhu   &fslh_qmark_mhu
-    &kp N1  &key_repeat  &kp SPACE  &semi_colon_mhu  &kp N2          &kp N3  &minus_under_mhu  &kp BSPC         &star_excl_mhu  &kp N4
+    &none    &kp Q   &kp W        &kp F      &kp P            &kp B           &kp J   &kp L             &kp U            &kp Z           &sqt_dqt_mhu       &none
+    &none    &kp A   &kp R        &kp S      &kp T            &kp G           &kp M   &kp N             &kp E            &kp I           &kp O              &none
+    &none    &kp Y   &kp X        &kp C      &kp D            &kp V           &kp K   &kp H             &comma_lpar_mhu  &dot_rpar_mhu   &fslh_qmark_mhu    &none
+    &none    &kp N1  &key_repeat  &kp SPACE  &semi_colon_mhu  &kp N2          &kp N3  &minus_under_mhu  &kp BSPC         &star_excl_mhu  &kp N4             &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -693,10 +693,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_nav_layer {
 // MHU_NAV
             bindings = <
-    &to SYSTEM   &to MHU_TAIPO  &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none
-    &kp LGUI     &kp LALT       &kp LCTRL    &kp LSHFT        &caps_word              &kp CAPS      &kp LEFT          &kp DOWN   &kp UP          &kp RIGHT
-    &m_undo_mhu  &m_cut_mhu     &m_copy_mhu  &m_paste_mhu     &m_again_mhu            &kp LC(BSPC)  &kp HOME          &kp PG_DN  &kp PG_UP       &kp END
-    &kp N1       &key_repeat    &kp SPACE    &semi_colon_mhu  &kp N2                  &kp N3        &minus_under_mhu  &kp BSPC   &star_excl_mhu  &kp N4
+    &none    &to SYSTEM   &to MHU_TAIPO  &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none        &none
+    &none    &kp LGUI     &kp LALT       &kp LCTRL    &kp LSHFT        &caps_word              &kp CAPS      &kp LEFT          &kp DOWN   &kp UP          &kp RIGHT    &none
+    &none    &m_undo_mhu  &m_cut_mhu     &m_copy_mhu  &m_paste_mhu     &m_again_mhu            &kp LC(BSPC)  &kp HOME          &kp PG_DN  &kp PG_UP       &kp END      &none
+    &none    &kp N1       &key_repeat    &kp SPACE    &semi_colon_mhu  &kp N2                  &kp N3        &minus_under_mhu  &kp BSPC   &star_excl_mhu  &kp N4       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -705,10 +705,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_num_layer {
 // MHU_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
             bindings = <
-    &kp N6     &kp N7       &kp N8           &kp N9           &kp CARET            &kp F12    &kp F9            &kp F8     &kp F7          &kp F6
-    &kp GRAVE  &kp N1       &kp N2           &kp N3           &kp HASH             &kp F11    &kp F3            &kp F2     &kp F1          &kp F10
-    &kp N4     &kp SLCK     &kp PAUSE_BREAK  &kp N5           &m_star_mhu          &kp PSCRN  &kp F5            &kp COMMA  &kp DOT         &kp F4
-    &kp N1     &key_repeat  &kp SPACE        &semi_colon_mhu  &kp N2               &kp N3     &minus_under_mhu  &kp BSPC   &star_excl_mhu  &kp N4
+    &none    &kp N6     &kp N7       &kp N8           &kp N9           &kp CARET            &kp F12    &kp F9            &kp F8     &kp F7          &kp F6       &none
+    &none    &kp GRAVE  &kp N1       &kp N2           &kp N3           &kp HASH             &kp F11    &kp F3            &kp F2     &kp F1          &kp F10      &none
+    &none    &kp N4     &kp SLCK     &kp PAUSE_BREAK  &kp N5           &m_star_mhu          &kp PSCRN  &kp F5            &kp COMMA  &kp DOT         &kp F4       &none
+    &none    &kp N1     &key_repeat  &kp SPACE        &semi_colon_mhu  &kp N2               &kp N3     &minus_under_mhu  &kp BSPC   &star_excl_mhu  &kp N4       &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -717,10 +717,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_sym_layer {
 // MHU_SYM
             bindings = <
-    &m_grave_mhu  &m_lt_mhu    &m_gt_mhu    &m_dqt_mhu       &kp DOT                 &m_amps_mhu   &m_scope_mhu      &m_lbkt_mhu  &m_rbkt_mhu     &m_prcnt_mhu
-    &m_excl_mhu   &kp FSLH     &m_plus_mhu  &m_equal_mhu     &m_hash_mhu             &m_pipe_mhu   &m_colon_mhu      &m_lpar_mhu  &m_rpar_mhu     &m_qmark_mhu
-    &m_caret_mhu  &m_fslh_mhu  &m_star_mhu  &m_bslh_mhu      &m_par_dir_mhu          &m_tilde_mhu  &m_dllr_mhu       &m_lbrc_mhu  &m_rbrc_mhu     &m_at_mhu
-    &kp N1        &key_repeat  &kp SPACE    &semi_colon_mhu  &kp N2                  &kp N3        &minus_under_mhu  &kp BSPC     &star_excl_mhu  &kp N4
+    &none    &m_grave_mhu  &m_lt_mhu    &m_gt_mhu    &m_dqt_mhu       &kp DOT                 &m_amps_mhu   &m_scope_mhu      &m_lbkt_mhu  &m_rbkt_mhu     &m_prcnt_mhu     &none
+    &none    &m_excl_mhu   &kp FSLH     &m_plus_mhu  &m_equal_mhu     &m_hash_mhu             &m_pipe_mhu   &m_colon_mhu      &m_lpar_mhu  &m_rpar_mhu     &m_qmark_mhu     &none
+    &none    &m_caret_mhu  &m_fslh_mhu  &m_star_mhu  &m_bslh_mhu      &m_par_dir_mhu          &m_tilde_mhu  &m_dllr_mhu       &m_lbrc_mhu  &m_rbrc_mhu     &m_at_mhu        &none
+    &none    &kp N1        &key_repeat  &kp SPACE    &semi_colon_mhu  &kp N2                  &kp N3        &minus_under_mhu  &kp BSPC     &star_excl_mhu  &kp N4           &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -729,10 +729,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_acute_layer {
 // ACUTE LAYER
             bindings = <
-    &to MHU_BASE       &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_u_acute_to_mhu  &to MHU_BASE       &to MHU_BASE
-    &m_a_acute_to_mhu  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_e_acute_to_mhu  &m_i_acute_to_mhu  &m_o_acute_to_mhu
-    &to MHU_BASE       &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE       &to MHU_BASE       &to MHU_BASE
-    &to MHU_BASE       &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE       &to MHU_BASE       &to MHU_BASE
+    &none  &to MHU_BASE       &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_u_acute_to_mhu  &to MHU_BASE       &to MHU_BASE       &none
+    &none  &m_a_acute_to_mhu  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_e_acute_to_mhu  &m_i_acute_to_mhu  &m_o_acute_to_mhu  &none
+    &none  &to MHU_BASE       &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE       &to MHU_BASE       &to MHU_BASE       &none
+    &none  &to MHU_BASE       &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE       &to MHU_BASE       &to MHU_BASE       &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -741,11 +741,11 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_dacute_layer {
 // DOUBLE ACUTE LAYER
             bindings = <
-    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_u_dacute_to_mhu  &to MHU_BASE  &to MHU_BASE
-    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE        &to MHU_BASE  &m_o_dacute_to_mhu
-    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE        &to MHU_BASE  &to MHU_BASE
-    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE        &to MHU_BASE  &to MHU_BASE
-          >;
+    &none    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_u_dacute_to_mhu  &to MHU_BASE  &to MHU_BASE        &none
+    &none    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE        &to MHU_BASE  &m_o_dacute_to_mhu  &none
+    &none    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE        &to MHU_BASE  &to MHU_BASE        &none
+    &none    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE        &to MHU_BASE  &to MHU_BASE        &none
+          >;                                                                                                                                                                    
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
         };
@@ -753,10 +753,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_diaresis_layer {
 // DIARESIS LAYER
             bindings = <
-    &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_u_diaresis_to_mhu  &to MHU_BASE  &to MHU_BASE
-    &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE          &to MHU_BASE  &m_o_diaresis_to_mhu
-    &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE          &to MHU_BASE  &to MHU_BASE
-    &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE          &to MHU_BASE  &to MHU_BASE
+    &none  &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_u_diaresis_to_mhu  &to MHU_BASE  &to MHU_BASE          &none
+    &none  &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE          &to MHU_BASE  &m_o_diaresis_to_mhu  &none
+    &none  &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE          &to MHU_BASE  &to MHU_BASE          &none
+    &none  &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE          &to MHU_BASE  &to MHU_BASE          &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
@@ -765,10 +765,10 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_taipo_layer {
 // TAIPO LAYER
             bindings = <
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
-    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none 
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
+    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
           >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
