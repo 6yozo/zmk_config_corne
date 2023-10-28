@@ -48,44 +48,6 @@
 #define OTR 37 // Outer Thumb Right
 #define ITR 38 // Inner Thumb Right
 
-#define TAIPO_COMBO(NAME, HOST_LAYOUT, BINDINGS, OUTER_BINDINGS, INNER_BINDINGS, LEFT_KEYPOS, RIGHT_KEYPOS) \
-combo_l_##NAME##HOST_LAYOUT { \
-	timeout-ms = <TIMEOUT_MS>; \
-	bindings = <BINDINGS>; \
-	key-positions = <LEFT_KEYPOS>; \
-	layers = <HOST_LAYOUT##_TAIPO>; \
-}; \
-combo_li_##NAME##HOST_LAYOUT { \
-	timeout-ms = <TIMEOUT_MS>; \
-	bindings = <INNER_BINDINGS>; \
-	key-positions = <LEFT_KEYPOS ITL>; \
-	layers = <HOST_LAYOUT##_TAIPO>; \
-}; \
-combo_lo_##NAME##HOST_LAYOUT { \
-	timeout-ms = <TIMEOUT_MS>; \
-	bindings = <OUTER_BINDINGS>; \
-	key-positions = <LEFT_KEYPOS OTL>; \
-	layers = <HOST_LAYOUT##_TAIPO>; \
-}; \
-combo_r_##NAME##HOST_LAYOUT { \
-	timeout-ms = <TIMEOUT_MS>; \
-	bindings = <BINDINGS>; \
-	key-positions = <RIGHT_KEYPOS>; \
-	layers = <HOST_LAYOUT##_TAIPO>; \
-}; \
-combo_ri_##NAME##HOST_LAYOUT { \
-	timeout-ms = <TIMEOUT_MS>; \
-	bindings = <INNER_BINDINGS>; \
-	key-positions = <RIGHT_KEYPOS ITR>; \
-	layers = <HOST_LAYOUT##_TAIPO>; \
-}; \
-combo_ro_##NAME##HOST_LAYOUT { \
-	timeout-ms = <TIMEOUT_MS>; \
-	bindings = <OUTER_BINDINGS>; \
-	key-positions = <RIGHT_KEYPOS OTR>; \
-	layers = <HOST_LAYOUT##_TAIPO>; \
-};
-
 / {
     behaviors {
       skq: sticky_key_quick_release {
@@ -102,80 +64,25 @@ combo_ro_##NAME##HOST_LAYOUT { \
     combos {
         compatible = "zmk,combos";
 
-        combo_l_space { \
-        	timeout-ms = <TIMEOUT_MS>; \
-        	bindings = <&kp SPACE>; \
-        	key-positions = <OTL>; \
-        	layers = <WEN_TAIPO>; \
-        };
-        
-        combo_r_space { \
-        	timeout-ms = <TIMEOUT_MS>; \
-        	bindings = <&kp SPACE>; \
-        	key-positions = <OTR>; \
-        	layers = <WEN_TAIPO>; \
-        };
-        
-        combo_l_bspc { \
-        	timeout-ms = <TIMEOUT_MS>; \
-        	bindings = <&kp BSPC>; \
-        	key-positions = <ITL>; \
-        	layers = <WEN_TAIPO>; \
-        };
-        
-        combo_r_bspc { \
-        	timeout-ms = <TIMEOUT_MS>; \
-        	bindings = <&kp BSPC>; \
-        	key-positions = <ITR>; \
-        	layers = <WEN_TAIPO>; \
+        combo_to_system {
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <2 3 4>;
+            bindings = <&to SYSTEM >;
+            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
 
-        TAIPO_COMBO(R,      WEN, &kp R, &kp GT,   &kp LS(R), HPL, HPR)
-        TAIPO_COMBO(S,      WEN, &kp S, &kp RBRC, &kp LS(S), HRL, HRR)
-        TAIPO_COMBO(N,      WEN, &kp N, &kp RBKT, &kp LS(N), HML, HMR)
-        TAIPO_COMBO(I,      WEN, &kp I, &kp RPAR, &kp LS(I), HIL, HIR)
-        TAIPO_COMBO(A,      WEN, &kp A, &kp LT,   &kp LS(A), BPL, BPR)
-        TAIPO_COMBO(O,      WEN, &kp O, &kp LBRC, &kp LS(O), BRL, BRR)
-        TAIPO_COMBO(T,      WEN, &kp T, &kp LBKT, &kp LS(T), BML, BMR)
-        TAIPO_COMBO(E,      WEN, &kp E, &kp LPAR, &kp LS(E), BIL, BIR)
-                               
-        TAIPO_COMBO(B,      WEN, &kp B,     &kp N9,     &kp LS(B), HPL HRL, HPR HRR)
-        TAIPO_COMBO(Y,      WEN, &kp Y,     &kp N5,     &kp LS(Y), HML HIL, HMR HIR)
-        TAIPO_COMBO(L,      WEN, &kp L,     &kp N4,     &kp LS(L), BPL BRL, BPR BRR)
-        TAIPO_COMBO(H,      WEN, &kp H,     &kp N0,     &kp LS(H), BML BIL, BMR BIR)
-        TAIPO_COMBO(P,      WEN, &kp P,     &kp N7,     &kp LS(P), HRL HML, HRR HMR)
-        TAIPO_COMBO(U,      WEN, &kp U,     &kp N2,     &kp LS(U), BRL BML, BRR BMR)
-        TAIPO_COMBO(G,      WEN, &kp G,     &kp HASH,   &kp LS(G), HPL HIL, HPR HIR)
-        TAIPO_COMBO(D,      WEN, &kp D,     &kp AT,     &kp LS(D), BPL BIL, BPR BIR)
-        TAIPO_COMBO(Z,      WEN, &kp Z,     &kp N8,     &kp LS(Z), HPL HML, HPR HMR)
-        TAIPO_COMBO(F,      WEN, &kp F,     &kp N6,     &kp LS(F), HRL HIL, HRR HIR)
-        TAIPO_COMBO(Q,      WEN, &kp Q,     &kp N3,     &kp LS(Q), BPL BML, BPR BMR)        
-        TAIPO_COMBO(C,      WEN, &kp C,     &kp N1,     &kp LS(C), BRL BIL, BRR BIR)
-        TAIPO_COMBO(X,      WEN, &kp X,     &kp CARET,  &kp LS(X), HPL BML, HPR BMR)
-        TAIPO_COMBO(K,      WEN, &kp K,     &kp PLUS,   &kp LS(K), HIL BRL, HIR BRR)
-        TAIPO_COMBO(V,      WEN, &kp V,     &kp STAR,   &kp LS(V), HRL BIL, HRR BIR)
-        TAIPO_COMBO(J,      WEN, &kp J,     &kp EQUAL,  &kp LS(J), HML BPL, HMR BPR)
-        TAIPO_COMBO(M,      WEN, &kp M,     &kp DOLLAR, &kp LS(M), HPL BIL, HPR BIR)
-        TAIPO_COMBO(W,      WEN, &kp W,     &kp AMPS,   &kp LS(W), HIL BPL, HIR BPR)
-        TAIPO_COMBO(SLASH,  WEN, &kp SLASH, &kp PIPE,   &kp BSLH,  HRL BML, HRR BMR)
-        TAIPO_COMBO(MINUS,  WEN, &kp MINUS, &kp PRCNT,  &kp UNDER, HML BRL, HMR BRR)
-        TAIPO_COMBO(SEMI,   WEN, &kp SEMI,  &none,      &kp COLON, HPL BRL, HPR BRR)        
-        TAIPO_COMBO(QMARK,  WEN, &kp QMARK, &none,      &kp EXCL,  HIL BML, HIR BMR)
-        TAIPO_COMBO(COMMA,  WEN, &kp COMMA, &kp TILDE,  &kp DOT,   HML BIL, HMR BIR)
-        TAIPO_COMBO(SQT,    WEN, &kp SQT,   &kp GRAVE,  &kp DQT,   HRL BPL, HRR BPR)
-                               
-        TAIPO_COMBO(LGUI,   WEN, &sk LGUI,   &kp PGUP, &kp RIGHT, HPL BPL, HPR BPR)
-        TAIPO_COMBO(LALT,   WEN, &sk LALT,   &kp HOME, &kp UP,    HRL BRL, HRR BRR)
-        TAIPO_COMBO(LSHIFT, WEN, &sk LSHIFT, &kp PGDN, &kp LEFT,  HIL BIL, HIR BIR)
-        TAIPO_COMBO(LCTRL,  WEN, &sk LCTRL,  &kp END,  &kp DOWN,  HML BML, HMR BMR)
-                                
-        TAIPO_COMBO(TAB,    WEN, &kp TAB,   &kp INS,  &kp DEL, HRL HML HIL, HRR HMR HIR)
-        TAIPO_COMBO(ENTER,  WEN, &kp ENTER, &kp LALT, &kp ESC, BRL BML BIL, BRR BMR BIR)
-                                
-        TAIPO_COMBO(TO_SYSTEM, WEN, &to SYSTEM, &none, &none, HPL HRL HML, HPR HRR HMR)
-        
-        TAIPO_COMBO(TO_SYSTEM, WHU, &to SYSTEM, &none, &none, HPL HRL HML, HPR HRR HMR)
-        
+        combo_globe_right {
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <40 18>;
+            bindings = <&skq GLOBE>;
+            layers = <MHU_LAYER_SET>;
+        };
+        combo_globe_left {
+            timeout-ms = <TIMEOUT_MS>;
+            key-positions = <37 17>;
+            bindings = <&skq GLOBE>;
+            layers = <MHU_LAYER_SET>;
+        };
         combo_shft_right {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <40 19>;
@@ -214,27 +121,15 @@ combo_ro_##NAME##HOST_LAYOUT { \
         }; 
         combo_gui_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <40 13>;
+            key-positions = <40 22>;
             bindings = <&skq LGUI>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_gui_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <37 10>;
+            key-positions = <37 13>;
             bindings = <&skq LGUI>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
-        };
-        combo_globe_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <40 18>;
-            bindings = <&skq GLOBE>;
-            layers = <MHU_LAYER_SET>;
-        };
-        combo_globe_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <37 17>;
-            bindings = <&skq GLOBE>;
-            layers = <MHU_LAYER_SET>;
         };
 
         combo_to_wen_base_left {
@@ -320,18 +215,6 @@ combo_ro_##NAME##HOST_LAYOUT { \
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <41 33>;
             bindings = <&to WEN_DAL>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_taipo_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 03>;
-            bindings = <&to WEN_TAIPO>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_taipo_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 8>;
-            bindings = <&to WEN_TAIPO>;
             layers = <WEN_LAYER_SET>;
         };
 
@@ -421,51 +304,27 @@ combo_ro_##NAME##HOST_LAYOUT { \
             layers = <WHU_LAYER_SET>;
         };
 
-        combo_enter_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <26 27 28>;
-            bindings = <&kp RET>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
-        };
         combo_enter_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <31 32 33>;
+            key-positions = <32 33>;
             bindings = <&kp RET>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
-        };
-        combo_tab_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <14 15 16>;
-            bindings = <&kp TAB>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
-        };
-        combo_tab_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <19 20 21>;
-            bindings = <&kp TAB>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_esc_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 26 27 28>;
+            key-positions = <26 27>;
             bindings = <&kp ESC>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
-        combo_esc_right {
+        combo_tab_left {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 31 32 33>;
-            bindings = <&kp ESC>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
-        };
-        combo_del_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 14 15 16>;
-            bindings = <&kp DEL>;
+            key-positions = <14 15>;
+            bindings = <&kp TAB>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
         combo_del_right {
             timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 19 20 21>;
+            key-positions = <20 21>;
             bindings = <&kp DEL>;
             layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
         };
@@ -501,7 +360,7 @@ combo_ro_##NAME##HOST_LAYOUT { \
         wen_nav_layer {
 // WEN_NAV
             bindings = <
-    &none    &to SYSTEM  &to WEN_TAIPO  &kp K_APP    &none         &kp KP_NUMLOCK          &kp INS       &none      &none      &none       &none        &none
+    &none    &none       &none          &kp K_APP    &none         &kp KP_NUMLOCK          &kp INS       &none      &none      &none       &none        &none
     &none    &kp LGUI    &kp LALT       &kp LCTRL    &kp LSHFT     &caps_word              &kp CAPS      &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT    &none
     &none    &m_undo     &m_cut_wen     &m_copy_wen  &m_paste_wen  &m_again_wen            &kp LC(BSPC)  &kp HOME   &kp PG_DN  &kp PG_UP   &kp END      &none
                          &key_repeat    &kp SPACE    &kp SEMI                                            &kp MINUS  &kp BSPC   &star_excl
@@ -570,18 +429,6 @@ combo_ro_##NAME##HOST_LAYOUT { \
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
         };
 
-        wen_taipo_layer {
-// TAIPO LAYER
-            bindings = <
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
-                      &none  &none  &none                         &none  &none  &none
-          >;
-
-            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
-        };
-
         whu_base_layer {
 // COLEMAK-DH
             bindings = <
@@ -597,7 +444,7 @@ combo_ro_##NAME##HOST_LAYOUT { \
         whu_nav_layer {
 // WHU_NAV
             bindings = <
-    &none    &to SYSTEM  &to WHU_TAIPO  &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none        &none
+    &none    &none       &none          &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none        &none
     &none    &kp LGUI    &kp LALT       &kp LCTRL    &kp LSHFT        &caps_word              &kp CAPS      &kp LEFT          &kp DOWN   &kp UP          &kp RIGHT    &none
     &none    &m_undo     &m_cut_whu     &m_copy_whu  &m_paste_whu     &m_again_whu            &kp LC(BSPC)  &kp HOME          &kp PG_DN  &kp PG_UP       &kp END      &none
                          &key_repeat    &kp SPACE    &semi_colon_whu                                        &minus_under_whu  &kp BSPC   &star_excl_whu
@@ -666,18 +513,6 @@ combo_ro_##NAME##HOST_LAYOUT { \
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
         };
 
-        whu_taipo_layer {
-// TAIPO LAYER
-            bindings = <
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
-                      &none  &none  &none                         &none  &none  &none
-          >;
-
-            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
-        };
-
         mhu_base_layer {
 // COLEMAK-DH
             bindings = <
@@ -693,7 +528,7 @@ combo_ro_##NAME##HOST_LAYOUT { \
         mhu_nav_layer {
 // MHU_NAV
             bindings = <
-    &none    &to SYSTEM   &to MHU_TAIPO  &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none        &none
+    &none    &none        &none          &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none        &none
     &none    &kp LGUI     &kp LALT       &kp LCTRL    &kp LSHFT        &caps_word              &kp CAPS      &kp LEFT          &kp DOWN   &kp UP          &kp RIGHT    &none
     &none    &m_undo_mhu  &m_cut_mhu     &m_copy_mhu  &m_paste_mhu     &m_again_mhu            &kp LC(BSPC)  &kp HOME          &kp PG_DN  &kp PG_UP       &kp END      &none
                           &key_repeat    &kp SPACE    &semi_colon_mhu                                        &minus_under_mhu  &kp BSPC   &star_excl_mhu
@@ -761,19 +596,6 @@ combo_ro_##NAME##HOST_LAYOUT { \
 
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
         };
-
-        mhu_taipo_layer {
-// TAIPO LAYER
-            bindings = <
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none 
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
-    &none    &none    &none  &none  &none  &none           &none  &none  &none  &none  &none    &none
-                      &none  &none  &none                         &none  &none  &none
-          >;
-          
-            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_VOL_DN C_VOL_UP >;
-        };
-
     };
 };
 
