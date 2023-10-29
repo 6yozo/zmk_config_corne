@@ -45,17 +45,26 @@
 
 #define WHU_LAYER_SET WHU_BASE WHU_NAV WHU_NUM WHU_SYM WHU_AL WHU_DAL WHU_DL
 
+// BUNYA LAYOUT LAYERS FOR WIN-HUNGARIAN-QUERTZ HOST (WHU)
+
+#define WHU_BUNYA 15
+#define WHU_BUNYA_NAV 16
+#define WHU_BUNYA_NUM 17
+#define WHU_BUNYA_SYM 18
+
+#define WHU_BUNYA_LAYER_SET WHU_BUNYA WHU_BUNYA_NAV WHU_BUNYA_NUM WHU_BUNYA_SYM
+
 // LAYERS FOR MAC-HUNGARIAN-QUERTZ HOST (MHU)
 
-#define MHU_BASE  15
-#define MHU_NAV   16
-#define MHU_NUM   17
-#define MHU_SYM   18
+#define MHU_BASE  19
+#define MHU_NAV   20
+#define MHU_NUM   21
+#define MHU_SYM   22
 // Acute
-#define MHU_AL    19
+#define MHU_AL    23
 // Double acute
-#define MHU_DAL   20
+#define MHU_DAL   24
 // Diaresis
-#define MHU_DL    21
+#define MHU_DL    25
 
 #define MHU_LAYER_SET MHU_BASE MHU_NAV MHU_NUM MHU_SYM MHU_AL MHU_DAL MHU_DL
