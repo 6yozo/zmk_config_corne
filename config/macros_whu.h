@@ -23,6 +23,18 @@
 #include "layers.h"
 
 / {
+    behaviors {
+    skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_QUICK_RELEASE";
+#binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+        };
+    };
+
     macros {
  // wait-ms and tap-ms value
  // ---
@@ -585,5 +597,503 @@
                 ;
         )
 
+            ZMK_MACRO(whu_b_os_esc,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &kp ESC>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_tab,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &kp TAB>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_ret,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &kp RET>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_del,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &kp DEL>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_amps,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp C>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lbkt,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp F>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_rbkt,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp G>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_prcnt,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N5>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_pipe,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp W>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_colon,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp DOT>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lpar,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N8>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_rpar,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N9>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_qmark,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp COMMA>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_tilde,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp N1>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_dllr,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp SEMI>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lbrc,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp B>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_rbrc,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp N>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_at,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp V>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_grave,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp N7>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lt,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp M>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_gt,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp DOT>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_dqt,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N2>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_dot,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &kp DOT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_excl,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N4>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_minus,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &kp FSLH>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_plus,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N3>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_equal,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N7>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_hash,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp X>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_carethulc_caret,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp GRAVE>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_fslh,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N6>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_star,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp FSLH>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_bslh,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp Q>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_under,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp FSLH>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_semi,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp RALT>
+                      , <&macro_tap     &kp COMMA>
+                      , <&macro_release &kp RALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_sqt,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_press   &kp LSHFT>
+                      , <&macro_tap     &kp N1>
+                      , <&macro_release &kp LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lg,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LGUI>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_la,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LALT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lc,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LCTRL>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_ls,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LSHFT>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_la_lc_ls,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LS(LA(LCTRL))>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lg_lc_ls,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LG(LS(LCTRL))>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lg_la_ls,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LG(LS(LALT))>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lg_la_lc,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LG(LA(LCTRL))>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lc_ls,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LS(LCTRL)>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_la_lc,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LA(LCTRL)>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_la_ls,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LA(LSHFT)>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lg_ls,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LG(LSHFT)>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lg_la,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LG(LALT)>
+                      ;
+                      )
+
+            ZMK_MACRO(whu_b_os_lg_lc,
+                      wait-ms = <13>;
+                      tap-ms = <13>;
+                      bindings
+                      = <&to WHU_BUNYA>
+                      , <&macro_tap     &skq LG(LCTRL)>
+                      ;
+                      )
     };
 };
