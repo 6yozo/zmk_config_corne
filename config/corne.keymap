@@ -482,27 +482,27 @@
         };
 
         whu_bunya_punct_left {
-// WHU_BUNYA_PUNCT_LEFT
+// WHU_BUNYA-DTM_PUNCT_LEFT
             bindings = <
-    &to WHU_BUNYA  &whu_b_os_la_lc_ls   &whu_b_os_lg_lc_ls  &whu_b_os_lg_la_ls  &whu_b_os_lg_la_lc  &whu_b_os_lg_la          &whu_b_os_amps   &whu_b_os_semi   &whu_b_os_lbkt  &whu_b_os_rbkt  &whu_b_os_prcnt  &to WHU_BUNYA
-    &to WHU_BUNYA  &whu_b_os_lg         &whu_b_os_la        &whu_b_os_lc        &whu_b_os_ls        &whu_b_os_lg_ls          &whu_b_os_pipe   &whu_b_os_colon  &whu_b_os_lpar  &whu_b_os_rpar  &whu_b_os_qmark  &to WHU_BUNYA
-    &to WHU_BUNYA  &whu_b_os_la_ls      &to WHU_BUNYA_NAV   &to WHU_BUNYA       &whu_b_os_la_lc     &whu_b_os_lg_lc          &whu_b_os_tilde  &whu_b_os_dllr   &whu_b_os_lbrc  &whu_b_os_rbrc  &whu_b_os_at     &to WHU_BUNYA
-                                                            &to WHU_BUNYA       &to WHU_BUNYA       &to SYSTEM               &whu_b_os_lc_ls  &whu_b_os_ret    &whu_b_os_del
+    &whu_b_os_lga  &whu_b_os_lacs  &whu_b_os_lgcs     &whu_b_os_lgas  &whu_b_os_lgac  &whu_b_os_las          &whu_b_os_amps   &whu_b_os_semi   &whu_b_os_lbkt  &whu_b_os_rbkt  &whu_b_os_prcnt  &to WHU_BUNYA
+    &whu_b_os_lgs  &whu_b_os_lg    &whu_b_os_la       &whu_b_os_lc    &whu_b_os_ls    &whu_b_os_lcs          &whu_b_os_pipe   &whu_b_os_colon  &whu_b_os_lpar  &whu_b_os_rpar  &whu_b_os_qmark  &to WHU_BUNYA
+    &whu_b_os_lgc  &none           &to WHU_BUNYA_NAV  &to WHU_BUNYA   &none           &whu_b_os_lac          &whu_b_os_tilde  &whu_b_os_dllr   &whu_b_os_lbrc  &whu_b_os_rbrc  &whu_b_os_at     &to WHU_BUNYA
+                                                      &to WHU_BUNYA   &to WHU_BUNYA   &to SYSTEM             &none            &whu_b_os_ret    &whu_b_os_del
             >;
         };
         
         whu_bunya_punct_right {
-// WHU_BUNYA_PUNCT_RIGHT
+// WHU_BUNYA-DTM_PUNCT_RIGHT
             bindings = <
-    &to WHU_BUNYA  &whu_b_os_sqt              &whu_b_os_lt     &whu_b_os_gt    &whu_b_os_dqt    &whu_b_os_dot            &whu_b_os_lg_la  &whu_b_os_lg_la_lc  &whu_b_os_lg_la_ls  &whu_b_os_lg_lc_ls  &whu_b_os_la_lc_ls  &to WHU_BUNYA
-    &to WHU_BUNYA  &whu_b_os_excl             &whu_b_os_minus  &whu_b_os_plus  &whu_b_os_equal  &whu_b_os_hash           &whu_b_os_lg_ls  &whu_b_os_ls        &whu_b_os_lc        &whu_b_os_la        &whu_b_os_lg        &to WHU_BUNYA
-    &to WHU_BUNYA  &whu_b_os_carethulc_caret  &whu_b_os_fslh   &whu_b_os_star  &whu_b_os_bslh   &whu_b_os_under          &whu_b_os_lg_lc  &whu_b_os_la_lc     &to WHU_BUNYA_NUM   &to WHU_BUNYA_SYM   &whu_b_os_la_ls     &to WHU_BUNYA
-                                                               &whu_b_os_esc   &whu_b_os_tab    &whu_b_os_lc_ls          &to WHU_BUNYA    &whu_b_os_grave     &to WHU_BUNYA
+    &to WHU_BUNYA    &whu_b_os_sqt              &whu_b_os_lt     &whu_b_os_gt    &whu_b_os_dqt    &whu_b_os_dot            &whu_b_os_las  &whu_b_os_lgac  &whu_b_os_lgas     &whu_b_os_lgcs     &whu_b_os_lacs  &whu_b_os_lga
+    &whu_b_os_grave  &whu_b_os_excl             &whu_b_os_minus  &whu_b_os_plus  &whu_b_os_equal  &whu_b_os_hash           &whu_b_os_lcs  &whu_b_os_ls    &whu_b_os_lc       &whu_b_os_la       &whu_b_os_lg    &whu_b_os_lgs
+    &to WHU_BUNYA    &whu_b_os_carethulc_caret  &whu_b_os_fslh   &whu_b_os_star  &whu_b_os_bslh   &whu_b_os_under          &whu_b_os_lac  &none           &to WHU_BUNYA_NUM  &to WHU_BUNYA_SYM  &none           &whu_b_os_lgc
+                                                                 &whu_b_os_esc   &whu_b_os_tab    &none                    &to WHU_BUNYA    &none           &to WHU_BUNYA
             >;
         };
 
         whu_bunya_nav_layer {
-// WHU_BUNYA_NAV
+// WHU_BUNYA-DTM_NAV
             bindings = <
     &none  &none     &none       &kp K_APP                 &none         &kp KP_NUMLOCK          &kp INS       &kp DEL   &kp RET                    &kp TAB    &kp ESC    &none
     &none  &kp LGUI  &kp LALT    &kp LCTRL                 &kp LSHFT     &caps_word              &kp CAPS      &kp LEFT  &kp DOWN                   &kp UP     &kp RIGHT  &none
@@ -512,7 +512,7 @@
         };
 
         whu_bunya_num_layer {
-// WHU_BUNYA_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
+// WHU_BUNYA-DTM_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
             bindings = <
     &none    &kp N6     &kp N7    &kp N8                    &kp N9  &kp CARET            &kp F12    &kp F9     &kp F8                     &kp F7   &kp F6   &none
     &none    &kp GRAVE  &kp N1    &kp N2                    &kp N3  &kp HASH             &kp F11    &kp F3     &kp F2                     &kp F1   &kp F10  &none
@@ -522,7 +522,7 @@
         };
         
         whu_bunya_sym_layer {
-// WHU_BUNYA_SYM
+// WHU_BUNYA-DTM_SYM
             bindings = <
     &none  &m_grave_whu          &m_lt_whu    &m_gt_whu                 &m_dqt_whu    &kp DOT                  &m_amps_whu   &m_scope_whu  &m_lbkt_whu  &m_rbkt_whu  &m_prcnt_whu  &none
     &none  &m_excl_whu           &kp FSLH     &m_plus_whu               &m_equal_whu  &m_hash_whu              &m_pipe_whu   &m_colon_whu  &m_lpar_whu  &m_rpar_whu  &m_qmark_whu  &none

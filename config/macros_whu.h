@@ -1006,7 +1006,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_la_lc_ls,
+            ZMK_MACRO(whu_b_os_lacs,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1015,7 +1015,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_lg_lc_ls,
+            ZMK_MACRO(whu_b_os_lgcs,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1024,7 +1024,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_lg_la_ls,
+            ZMK_MACRO(whu_b_os_lgas,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1033,7 +1033,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_lg_la_lc,
+            ZMK_MACRO(whu_b_os_lgac,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1042,7 +1042,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_lc_ls,
+            ZMK_MACRO(whu_b_os_lcs,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1051,7 +1051,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_la_lc,
+            ZMK_MACRO(whu_b_os_lac,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1060,7 +1060,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_la_ls,
+            ZMK_MACRO(whu_b_os_las,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1069,7 +1069,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_lg_ls,
+            ZMK_MACRO(whu_b_os_lgs,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1078,7 +1078,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_lg_la,
+            ZMK_MACRO(whu_b_os_lga,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
@@ -1087,7 +1087,7 @@
                       ;
                       )
 
-            ZMK_MACRO(whu_b_os_lg_lc,
+            ZMK_MACRO(whu_b_os_lgc,
                       wait-ms = <13>;
                       tap-ms = <13>;
                       bindings
