@@ -19,7 +19,7 @@
 #include "macros_whu.h"
 #include "macros_wen.h"
 #include "mhu.h"
-#include "whu.h"
+#include "bunya-dtm.h"
 
 // Left Side
 #define TIL  3 // Top Index finger Left
@@ -472,15 +472,8 @@
           >;
         };
 
-        whu_bunya_base_layer {
 // BUNYA-DTM
-            bindings = <
-    WHU_U_ACUTE   WHU_Y  WHU_L  WHU_D                     WHU_P  WHU_V               WHU_J        WHU_K      WHU_O                      WHU_U        WHU_DOT    WHU_I_ACUTE
-    WHU_O_DACUTE  WHU_N  WHU_R  WHU_T                     WHU_C  WHU_B               WHU_Z        WHU_H      WHU_A                      WHU_E        WHU_I      WHU_O_DIARESIS
-    WHU_U_DACUTE  WHU_X  WHU_Q  WHU_M                     WHU_G  WHU_W               WHU_O_ACUTE  WHU_F      WHU_E_ACUTE                WHU_A_ACUTE  WHU_COMMA  WHU_U_DIARESIS
-                                &to WHU_BUNYA_PUNCT_LEFT  WHU_S  &to SYSTEM          WHU_BSPC     WHU_SPACE  &to WHU_BUNYA_PUNCT_RIGHT
-          >;
-        };
+        whu_bunya_base_layer { bindings = < MAKE_BUNYA_DTM(WHU) >; };        
 
         whu_bunya_punct_left {
 // WHU_BUNYA-DTM_PUNCT_LEFT
