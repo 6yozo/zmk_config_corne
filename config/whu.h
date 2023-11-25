@@ -14,13 +14,8 @@
 #pragma once
 
 #include <behaviors.dtsi>
-//#include <dt-bindings/zmk/keys.h>
-//#include <dt-bindings/zmk/bt.h>
-//#include <dt-bindings/zmk/rgb.h>
-//#include <dt-bindings/zmk/outputs.h>
-//#include <dt-bindings/zmk/ext_power.h>
 
-#include "macros_whu.h"
+#include "whu-macros.h"
 
 #define WHU_U_ACUTE     &m_u_acute
 #define WHU_Z           &kp Y

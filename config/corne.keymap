@@ -16,7 +16,7 @@
 #include "layers.h"
 #include "punctuation_en.h"
 #include "punctuation_hu.h"
-#include "macros_whu.h"
+#include "whu-macros.h"
 #include "macros_wen.h"
 #include "mhu.h"
 #include "bunya-dtm.h"
@@ -473,27 +473,9 @@
         };
 
 // BUNYA-DTM
-        whu_bunya_base_layer { bindings = < MAKE_BUNYA_DTM(WHU) >; };
-
-        whu_bunya_punct_left {
-// WHU_BUNYA-DTM_PUNCT_LEFT
-            bindings = <
-    &whu_os_lga WHU_BUNYA  &whu_os_lacs WHU_BUNYA  &whu_os_lgcs WHU_BUNYA  &whu_os_lgas WHU_BUNYA  &whu_os_lgac WHU_BUNYA  &whu_os_las WHU_BUNYA          &whu_os_amps WHU_BUNYA   &whu_os_semi WHU_BUNYA   &whu_os_lbkt WHU_BUNYA  &whu_os_rbkt WHU_BUNYA  &whu_os_prcnt WHU_BUNYA  &to WHU_BUNYA
-    &whu_os_lgs WHU_BUNYA  &whu_os_lg WHU_BUNYA    &whu_os_la WHU_BUNYA    &whu_os_lc WHU_BUNYA    &whu_os_ls WHU_BUNYA    &whu_os_lcs WHU_BUNYA          &whu_os_pipe WHU_BUNYA   &whu_os_colon WHU_BUNYA  &whu_os_lpar WHU_BUNYA  &whu_os_rpar WHU_BUNYA  &whu_os_qmark WHU_BUNYA  &to WHU_BUNYA
-    &whu_os_lgc WHU_BUNYA  &to WHU_BUNYA_SYM       &to WHU_BUNYA_NUM       &to WHU_BUNYA_NAV       &to WHU_BUNYA           &whu_os_lac WHU_BUNYA          &whu_os_tilde WHU_BUNYA  &whu_os_dllr WHU_BUNYA   &whu_os_lbrc WHU_BUNYA  &whu_os_rbrc WHU_BUNYA  &whu_os_at WHU_BUNYA     &to WHU_BUNYA
-                                                                           &to WHU_BUNYA           &to WHU_BUNYA           &to SYSTEM                     &whu_os_del WHU_BUNYA    &whu_os_ret WHU_BUNYA    &kp CAPS
-            >; // TODO: One shot caps
-        };
-        
-        whu_bunya_punct_right {
-// WHU_BUNYA-DTM_PUNCT_RIGHT
-            bindings = <
-    &to WHU_BUNYA            &whu_os_sqt WHU_BUNYA              &whu_os_lt WHU_BUNYA     &whu_os_gt WHU_BUNYA    &whu_os_dqt WHU_BUNYA    &whu_os_dot WHU_BUNYA            &whu_os_las WHU_BUNYA  &whu_os_lgac WHU_BUNYA  &whu_os_lgas WHU_BUNYA  &whu_os_lgcs WHU_BUNYA  &whu_os_lacs WHU_BUNYA  &whu_os_lga WHU_BUNYA 
-    &whu_os_grave WHU_BUNYA  &whu_os_excl WHU_BUNYA             &whu_os_minus WHU_BUNYA  &whu_os_plus WHU_BUNYA  &whu_os_equal WHU_BUNYA  &whu_os_hash WHU_BUNYA           &whu_os_lcs WHU_BUNYA  &whu_os_ls WHU_BUNYA    &whu_os_lc WHU_BUNYA    &whu_os_la WHU_BUNYA    &whu_os_lg WHU_BUNYA    &whu_os_lgs WHU_BUNYA
-    &to WHU_BUNYA            &whu_os_carethulc_caret WHU_BUNYA  &whu_os_fslh WHU_BUNYA   &whu_os_star WHU_BUNYA  &whu_os_bslh WHU_BUNYA   &whu_os_under WHU_BUNYA          &whu_os_lac WHU_BUNYA  &to WHU_BUNYA           &to WHU_BUNYA_NAV       &to WHU_BUNYA_NUM       &to WHU_BUNYA_SYM       &whu_os_lgc WHU_BUNYA
-                                                                                         &whu_os_esc WHU_BUNYA   &whu_os_tab WHU_BUNYA    &to SYSTEM                       &to WHU_BUNYA          &to WHU_BUNYA           &to WHU_BUNYA
-            >;
-        };
+        whu_b_layer { bindings = < MAKE_BUNYA_DTM(WHU) >; };
+        whu_b_punct_left { bindings = < MAKE_PUNCT_LEFT(WHU, WHU_BUNYA, WHU_BUNYA) >; };
+        whu_b_punct_right { bindings = < MAKE_PUNCT_RIGHT(WHU, WHU_BUNYA, WHU_BUNYA) >; };
 
         whu_bunya_nav_layer {
 // WHU_BUNYA-DTM_NAV
