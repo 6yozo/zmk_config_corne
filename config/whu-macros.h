@@ -105,29 +105,11 @@
                 ;
         )
 
-        ZMK_MACRO(m_e_acute_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp SEMI>
-                , <&macro_tap     &to WHU_BASE>
-                ;
-        )
-
         ZMK_MACRO(m_o_acute,
             wait-ms = <13>;
             tap-ms = <13>;
             bindings
                 = <&macro_tap     &kp EQUAL>
-                ;
-        )
-
-        ZMK_MACRO(m_o_acute_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp EQUAL>
-                , <&macro_tap     &to WHU_BASE>
                 ;
         )
 
@@ -139,29 +121,11 @@
                 ;
         )
 
-        ZMK_MACRO(m_i_acute_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp NUBS>
-                , <&macro_tap     &to WHU_BASE>
-                ;
-        )
-
         ZMK_MACRO(m_u_acute,
             wait-ms = <13>;
             tap-ms = <13>;
             bindings
                 = <&macro_tap     &kp RBKT>
-                ;
-        )
-
-        ZMK_MACRO(m_u_acute_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp RBKT>
-                , <&macro_tap     &to WHU_BASE>
                 ;
         )
 
@@ -173,29 +137,11 @@
                 ;
         )
 
-        ZMK_MACRO(m_a_acute_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp SQT>
-                , <&macro_tap     &to WHU_BASE>
-                ;
-        )
-
         ZMK_MACRO(m_o_dacute,
             wait-ms = <13>;
             tap-ms = <13>;
             bindings
                 = <&macro_tap     &kp LBKT>
-                ;
-        )
-
-        ZMK_MACRO(m_o_dacute_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp LBKT>
-                , <&macro_tap     &to WHU_BASE>
                 ;
         )
 
@@ -207,15 +153,6 @@
                 ;
         )
 
-        ZMK_MACRO(m_u_dacute_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp BSLH>
-                , <&macro_tap     &to WHU_BASE>
-                ;
-        )
-
         ZMK_MACRO(m_o_diaresis,
             wait-ms = <13>;
             tap-ms = <13>;
@@ -224,29 +161,11 @@
                 ;
         )
 
-        ZMK_MACRO(m_o_diaresis_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp N0>
-                , <&macro_tap     &to WHU_BASE>
-                ;
-        )
-
         ZMK_MACRO(m_u_diaresis,
             wait-ms = <13>;
             tap-ms = <13>;
             bindings
                 = <&macro_tap     &kp MINUS>
-                ;
-        )
-
-        ZMK_MACRO(m_u_diaresis_to_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &kp MINUS>
-                , <&macro_tap     &to WHU_BASE>
                 ;
         )
 

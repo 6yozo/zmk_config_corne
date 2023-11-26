@@ -100,17 +100,6 @@
                 ;
         )
 
-        ZMK_MACRO(m_cap_u_acute_wen,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_PLUS &kp D &kp A>
-                , <&macro_release &kp LALT>
-                , <&macro_tap     &to WEN_BASE>
-                ;
-        )
-
         ZMK_MACRO(m_a_acute_wen,
             wait-ms = <13>;
             tap-ms = <13>;
@@ -167,39 +156,6 @@
             bindings
                 = <&macro_press   &kp LALT>
                 , <&macro_tap     &kp KP_PLUS &kp KP_N1 &kp KP_N7 &kp KP_N0>
-                , <&macro_release &kp LALT>
-                , <&macro_tap     &to WEN_BASE>
-                ;
-        )
-
-        ZMK_MACRO(m_o_diaresis_wen,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_PLUS &kp F &kp KP_N6>
-                , <&macro_release &kp LALT>
-                , <&macro_tap     &to WEN_BASE>
-                ;
-        )
-
-        ZMK_MACRO(m_cap_o_diaresis_wen,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_PLUS &kp D &kp KP_N6>
-                , <&macro_release &kp LALT>
-                , <&macro_tap     &to WEN_BASE>
-                ;
-        )
-
-        ZMK_MACRO(m_u_diaresis_wen,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LALT>
-                , <&macro_tap     &kp KP_PLUS &kp F &kp C>
                 , <&macro_release &kp LALT>
                 , <&macro_tap     &to WEN_BASE>
                 ;
