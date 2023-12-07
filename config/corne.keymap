@@ -17,7 +17,8 @@
 #include "punctuation_hu.h"
 #include "whu-macros.h"
 #include "mhu.h"
-#include "bunya-dtm.h"
+#include "bunya-dtm-hu.h"
+#include "sequitap.h"
 
 // Left Side
 #define TIL  3 // Top Index finger Left
@@ -159,48 +160,39 @@
         };
 
 // BUNYA-DTM
-        whu_b_layer { bindings = < MAKE_BUNYA_DTM(WHU) >; };
-        whu_b_punct_left { bindings = < MAKE_PUNCT_LEFT(WHU, WHU_BUNYA, WHU_BUNYA) >; };
-        whu_b_punct_right { bindings = < MAKE_PUNCT_RIGHT(WHU, WHU_BUNYA, WHU_BUNYA) >; };
+        whu_b_layer { bindings = < BUNYA_DTM(WHU) >; };
+        whu_b_punct_left { bindings = < MOD_LEFT(WHU, WHU_BUNYA, WHU_BUNYA) >; };
+        whu_b_punct_right { bindings = < MOD_RIGHT(WHU, WHU_BUNYA, WHU_BUNYA) >; };
 
         whu_bunya_nav_layer {
 // WHU_BUNYA-DTM_NAV
             bindings = <
-    &none  &none     &none       &kp K_APP                     &none         &kp KP_NUMLOCK          &kp INS       &kp DEL   &kp RET                        &kp TAB    &kp ESC    &none
-    &none  &kp LGUI  &kp LALT    &kp LCTRL                     &kp LSHFT     &caps_word              &none         &kp LEFT  &kp DOWN                       &kp UP     &kp RIGHT  &none
-    &none  &m_undo   &m_cut_whu  &m_copy_whu                   &m_paste_whu  &m_again_whu            &kp LC(BSPC)  &kp HOME  &kp PG_DN                      &kp PG_UP  &kp END    &none
-                                 &to WHU_BUNYA_NAV_PUNCT_LEFT  &kp S         &to SYSTEM              &kp BSPC      &kp SPACE &to WHU_BUNYA_NAV_PUNCT_RIGHT
+    &none  &none     &none       &kp K_APP               &none         &kp KP_NUMLOCK          &kp INS       &kp DEL   &kp RET                  &kp TAB    &kp ESC    &none
+    &none  &kp LGUI  &kp LALT    &kp LCTRL               &kp LSHFT     &caps_word              &none         &kp LEFT  &kp DOWN                 &kp UP     &kp RIGHT  &none
+    &none  &m_undo   &m_cut_whu  &m_copy_whu             &m_paste_whu  &m_again_whu            &kp LC(BSPC)  &kp HOME  &kp PG_DN                &kp PG_UP  &kp END    &none
+                                 &to WHU_BUNYA_MOD_LEFT  &kp S         &to SYSTEM              &kp BSPC      &kp SPACE &to WHU_BUNYA_MOD_RIGHT
             >;
         };
-
-        whu_bnav_punct_left { bindings = < MAKE_PUNCT_LEFT(WHU, WHU_BUNYA, WHU_BUNYA_NAV) >; };
-        whu_bnav_punct_right { bindings = < MAKE_PUNCT_RIGHT(WHU, WHU_BUNYA, WHU_BUNYA_NAV) >; };
 
         whu_bunya_num_layer {
 // WHU_BUNYA-DTM_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
             bindings = <
-    &none    &kp N6     &kp N7    &kp N8                        &kp N9  &kp CARET            &kp F12    &kp F9     &kp F8                         &kp F7   &kp F6   &none
-    &none    &kp GRAVE  &kp N1    &kp N2                        &kp N3  &kp HASH             &kp F11    &kp F3     &kp F2                         &kp F1   &kp F10  &none
-    &none    &kp N4     &kp SLCK  &kp PAUSE_BREAK               &kp N5  &m_star_whu          &kp PSCRN  &kp F5     &kp COMMA                      &kp DOT  &kp F4   &none
-                                  &to WHU_BUNYA_NUM_PUNCT_LEFT  &kp S   &to SYSTEM           &kp BSPC   &kp SPACE  &to WHU_BUNYA_NUM_PUNCT_RIGHT
+    &none    &kp N6     &kp N7    &kp N8                  &kp N9  &kp CARET            &kp F12    &kp F9     &kp F8                   &kp F7   &kp F6   &none
+    &none    &kp GRAVE  &kp N1    &kp N2                  &kp N3  &kp HASH             &kp F11    &kp F3     &kp F2                   &kp F1   &kp F10  &none
+    &none    &kp N4     &kp SLCK  &kp PAUSE_BREAK         &kp N5  &m_star_whu          &kp PSCRN  &kp F5     &kp COMMA                &kp DOT  &kp F4   &none
+                                  &to WHU_BUNYA_MOD_LEFT  &kp S   &to SYSTEM           &kp BSPC   &kp SPACE  &to WHU_BUNYA_MOD_RIGHT
             >;
         };
-
-        whu_bnum_punct_left { bindings = < MAKE_PUNCT_LEFT(WHU, WHU_BUNYA, WHU_BUNYA_NUM) >; };
-        whu_bnum_punct_right { bindings = < MAKE_PUNCT_RIGHT(WHU, WHU_BUNYA, WHU_BUNYA_NUM) >; };
 
         whu_bunya_sym_layer {
 // WHU_BUNYA-DTM_SYM
             bindings = <
-    &none  &m_grave_whu          &m_lt_whu    &m_gt_whu                     &m_dqt_whu    &kp DOT                  &m_amps_whu   &m_scope_whu  &m_lbkt_whu  &m_rbkt_whu      &m_prcnt_whu  &none
-    &none  &m_excl_whu           &kp FSLH     &m_plus_whu                   &m_equal_whu  &m_hash_whu              &m_pipe_whu   &m_colon_whu  &m_lpar_whu  &m_rpar_whu      &m_qmark_whu  &none
-    &none  &carethulc_caret_whu  &m_fslh_whu  &m_star_whu                   &m_bslh_whu   &m_par_dir_whu           &m_tilde_whu  &m_dllr_whu   &m_lbrc_whu  &m_rbrc_whu      &m_at_whu     &none
-                                              &to WHU_BUNYA_SYM_PUNCT_LEFT  &kp S         &to SYSTEM               &kp BSPC      &kp SPACE     &to WHU_BUNYA_SYM_PUNCT_RIGHT
+    &none  &m_grave_whu          &m_lt_whu    &m_gt_whu               &m_dqt_whu    &kp DOT                  &m_amps_whu   &m_scope_whu  &m_lbkt_whu  &m_rbkt_whu  &m_prcnt_whu  &none
+    &none  &m_excl_whu           &kp FSLH     &m_plus_whu             &m_equal_whu  &m_hash_whu              &m_pipe_whu   &m_colon_whu  &m_lpar_whu  &m_rpar_whu  &m_qmark_whu  &none
+    &none  &carethulc_caret_whu  &m_fslh_whu  &m_star_whu             &m_bslh_whu   &m_par_dir_whu           &m_tilde_whu  &m_dllr_whu   &m_lbrc_whu  &m_rbrc_whu  &m_at_whu     &none
+                                              &to WHU_BUNYA_MOD_LEFT  &kp S         &to SYSTEM               &kp BSPC      &kp SPACE     &to WHU_BUNYA_MOD_RIGHT
             >;
         };
-
-        whu_bsym_punct_left { bindings = < MAKE_PUNCT_LEFT(WHU, WHU_BUNYA, WHU_BUNYA_SYM) >; };
-        whu_bsym_punct_right { bindings = < MAKE_PUNCT_RIGHT(WHU, WHU_BUNYA, WHU_BUNYA_SYM) >; };
 
         mhu_base_layer {
 // COLEMAK-DH
