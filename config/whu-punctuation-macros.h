@@ -527,173 +527,50 @@
 
         WHU_os_lg: WHU_os_lg {
             label = "WHU_OS_LG";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
+                compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
             wait-ms = <13>;
             tap-ms = <13>;
             bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LGUI>
+                = <&macro_tap     &skq LGUI>
                 ;
         };
 
         WHU_os_la: WHU_os_la {
             label = "WHU_OS_LA";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
+            compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
             wait-ms = <13>;
             tap-ms = <13>;
             bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LALT>
+                = <&macro_tap     &skq LALT>
                 ;
         };
 
         WHU_os_lc: WHU_os_lc {
             label = "WHU_OS_LC";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
+                compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
             wait-ms = <13>;
             tap-ms = <13>;
             bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LCTRL>
+                = <&macro_tap     &skq LCTRL>
                 ;
         };
 
         WHU_os_ls: WHU_os_ls {
             label = "WHU_OS_LS";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
+                compatible = "zmk,behavior-macro";
+#binding-cells = <0>;
             wait-ms = <13>;
             tap-ms = <13>;
             bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LSHFT>
+                = <&macro_tap     &skq LSHFT>
                 ;
         };
 
-        WHU_os_lacs: WHU_os_lacs {
-            label = "WHU_OS_LACS";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LS(LA(LCTRL))>
-                ;
-        };
 
-        WHU_os_lgcs: WHU_os_lgcs {
-            label = "WHU_OS_LGCS";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LG(LS(LCTRL))>
-                ;
-        };
-
-        WHU_os_lgas: WHU_os_lgas {
-            label = "WHU_OS_LGAS";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LG(LS(LALT))>
-                ;
-        };
-
-        WHU_os_lgac: WHU_os_lgac {
-            label = "WHU_OS_LGAC";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LG(LA(LCTRL))>
-                ;
-        };
-
-        WHU_os_lcs: WHU_os_lcs {
-            label = "WHU_OS_LCS";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LS(LCTRL)>
-                ;
-        };
-
-        WHU_os_lac: WHU_os_lac {
-            label = "WHU_OS_LAC";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LA(LCTRL)>
-                ;
-        };
-
-        WHU_os_las: WHU_os_las {
-            label = "WHU_OS_LAS";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LA(LSHFT)>
-                ;
-        };
-
-        WHU_os_lgs: WHU_os_lgs {
-            label = "WHU_OS_LGS";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LG(LSHFT)>
-                ;
-        };
-
-        WHU_os_lga: WHU_os_lga {
-            label = "WHU_OS_LGA";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LG(LALT)>
-                ;
-        };
-
-        WHU_os_lgc: WHU_os_lgc {
-            label = "WHU_OS_LGC";
-                compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &skq LG(LCTRL)>
-                ;
-        };
-
-    WHU_os_caps: WHU_os_caps {
+        WHU_os_caps: WHU_os_caps {
             label = "WHU_OS_CAPS";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
