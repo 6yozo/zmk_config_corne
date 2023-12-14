@@ -161,8 +161,8 @@
 
 // BUNYA-DTM
         whu_b_layer { bindings = < BUNYA_DTM(WHU) >; };
-        whu_b_punct_left { bindings = < MOD_LEFT(WHU, WHU_BUNYA, WHU_BUNYA) >; };
-        whu_b_punct_right { bindings = < MOD_RIGHT(WHU, WHU_BUNYA, WHU_BUNYA) >; };
+        whu_b_punct_left { bindings = < MOD_LEFT(WHU, WHU_BUNYA) >; };
+        whu_b_punct_right { bindings = < MOD_RIGHT(WHU, WHU_BUNYA) >; };
 
         whu_bunya_nav_layer {
 // WHU_BUNYA-DTM_NAV

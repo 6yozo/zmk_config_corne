@@ -17,16 +17,19 @@
 #include "layers.h"
 #include "whu.h"
 #include "whu-punctuation-macros.h"
+#include "whu-os-letters.h"
 #include "bunya-dtm-hu.h"
 
-#define MOD_LEFT(PREFIX, BASE, TO) \
- &none  &none              &none              &none              &none              &none               &##PREFIX##_os_amps TO   &##PREFIX##_os_semi TO   &##PREFIX##_os_lbkt TO  &##PREFIX##_os_rbkt TO  &##PREFIX##_os_prcnt TO  &to TO \
- &none  &##PREFIX##_os_lg  &##PREFIX##_os_la  &##PREFIX##_os_lc  &##PREFIX##_os_ls  &none               &##PREFIX##_os_pipe TO   &##PREFIX##_os_colon TO  &##PREFIX##_os_lpar TO  &##PREFIX##_os_rpar TO  &##PREFIX##_os_qmark TO  &to TO \
- &none  &to BASE##_SYM     &to BASE##_NUM     &to BASE##_NAV     &to BASE           &none               &##PREFIX##_os_tilde TO  &##PREFIX##_os_dllr TO   &##PREFIX##_os_lbrc TO  &##PREFIX##_os_rbrc TO  &##PREFIX##_os_at TO     &to TO \
-                                              &to TO             &to TO             &to SYSTEM          &##PREFIX##_os_del TO    &##PREFIX##_os_ret TO    &##PREFIX##_os_caps TO
+// TODO place del, ret, esc, tab and caps somewhere
 
-#define MOD_RIGHT(PREFIX, BASE, TO) \
- &to TO                   &##PREFIX##_os_sqt TO              &##PREFIX##_os_lt TO     &##PREFIX##_os_gt TO    &##PREFIX##_os_dqt TO    &##PREFIX##_os_dot TO            &none  &none              &none              &none              &none              &none \
- &##PREFIX##_os_grave TO  &##PREFIX##_os_excl TO             &##PREFIX##_os_minus TO  &##PREFIX##_os_plus TO  &##PREFIX##_os_equal TO  &##PREFIX##_os_hash TO           &none  &##PREFIX##_os_ls  &##PREFIX##_os_lc  &##PREFIX##_os_la  &##PREFIX##_os_lg  &none \
- &to TO                   &##PREFIX##_os_carethulc_caret TO  &##PREFIX##_os_fslh TO   &##PREFIX##_os_star TO  &##PREFIX##_os_bslh TO   &##PREFIX##_os_under TO          &none  &to BASE           &to BASE##_NAV     &to BASE##_NUM     &to BASE##_SYM     &none \
-                                                                                      &##PREFIX##_os_esc TO   &##PREFIX##_os_tab TO    &to SYSTEM                       &to TO &to TO             &to TO
+#define MOD_LEFT(PREFIX, BASE) \
+ &none  &none              &none              &none              &none              &none               &##PREFIX##_os_j BASE        &##PREFIX##_os_k BASE      &##PREFIX##_os_o BASE        &##PREFIX##_os_u BASE        &##PREFIX##_os_dot BASE     &##PREFIX##_os_i_acute BASE \
+ &none  &##PREFIX##_os_lg  &##PREFIX##_os_la  &##PREFIX##_os_lc  &##PREFIX##_os_ls  &none               &##PREFIX##_os_y BASE        &##PREFIX##_os_h BASE      &##PREFIX##_os_a BASE        &##PREFIX##_os_e BASE        &##PREFIX##_os_i BASE       &##PREFIX##_os_o_diaresis BASE \
+ &none  &to BASE##_SYM     &to BASE##_NUM     &to BASE##_NAV     &to BASE           &none               &##PREFIX##_os_o_acute BASE  &##PREFIX##_os_f BASE      &##PREFIX##_os_e_acute BASE  &##PREFIX##_os_a_acute BASE  &##PREFIX##_os_comma  BASE  &##PREFIX##_os_u_diaresis BASE \
+                                              &to BASE           &to BASE           &to SYSTEM          &##PREFIX##_os_bspc BASE     &##PREFIX##_os_space BASE  &to BASE##_NAV
+
+#define MOD_RIGHT(PREFIX, BASE) \
+ &##PREFIX##_os_u_acute BASE   &##PREFIX##_os_z BASE  &##PREFIX##_os_l BASE  &##PREFIX##_os_d BASE  &##PREFIX##_os_p BASE  &##PREFIX##_os_v BASE          &none    &none              &none              &none              &none              &none \
+ &##PREFIX##_os_o_dacute BASE  &##PREFIX##_os_n BASE  &##PREFIX##_os_r BASE  &##PREFIX##_os_t BASE  &##PREFIX##_os_c BASE  &##PREFIX##_os_b BASE          &none    &##PREFIX##_os_ls  &##PREFIX##_os_lc  &##PREFIX##_os_la  &##PREFIX##_os_lg  &none \
+ &##PREFIX##_os_u_dacute BASE  &##PREFIX##_os_x BASE  &##PREFIX##_os_q BASE  &##PREFIX##_os_m BASE  &##PREFIX##_os_g BASE  &##PREFIX##_os_w BASE          &none    &to BASE           &to BASE##_NAV     &to BASE##_NUM     &to BASE##_SYM     &none \
+                                                                              &to BASE##_NAV        &##PREFIX##_os_s BASE  &to SYSTEM                     &to BASE &to BASE           &to BASE
