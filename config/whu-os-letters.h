@@ -40,7 +40,7 @@
             label = "WHU_os_u_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -52,7 +52,7 @@
             label = "WHU_os_y";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -64,7 +64,7 @@
             label = "WHU_os_l";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -76,7 +76,7 @@
             label = "WHU_os_d";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -88,7 +88,7 @@
             label = "WHU_os_p";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -100,7 +100,7 @@
             label = "WHU_os_v";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -112,7 +112,7 @@
             label = "WHU_os_j";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -124,7 +124,7 @@
             label = "WHU_os_k";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -136,7 +136,7 @@
             label = "WHU_os_o";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -148,7 +148,7 @@
             label = "WHU_os_u";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -160,7 +160,7 @@
             label = "WHU_os_dot";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -172,7 +172,7 @@
             label = "WHU_os_i_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -184,7 +184,7 @@
             label = "WHU_os_o_dacute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -196,7 +196,7 @@
             label = "WHU_os_n";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -208,7 +208,7 @@
             label = "WHU_os_r";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -220,7 +220,7 @@
             label = "WHU_os_t";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -232,7 +232,7 @@
             label = "WHU_os_c";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -244,7 +244,7 @@
             label = "WHU_os_b";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -256,7 +256,7 @@
             label = "WHU_os_z";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -268,7 +268,7 @@
             label = "WHU_os_h";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -280,7 +280,7 @@
             label = "WHU_os_a";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -292,7 +292,7 @@
             label = "WHU_os_e";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -304,7 +304,7 @@
             label = "WHU_os_i";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -316,7 +316,7 @@
             label = "WHU_os_o_diaresis";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -328,7 +328,7 @@
             label = "WHU_os_u_dacute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -340,7 +340,7 @@
             label = "WHU_os_x";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -352,7 +352,7 @@
             label = "WHU_os_q";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -364,7 +364,7 @@
             label = "WHU_os_m";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -376,7 +376,7 @@
             label = "WHU_os_g";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -388,7 +388,7 @@
             label = "WHU_os_w";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -400,7 +400,7 @@
             label = "WHU_os_o_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -412,7 +412,7 @@
             label = "WHU_os_f";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -424,7 +424,7 @@
             label = "WHU_os_e_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -436,7 +436,7 @@
             label = "WHU_os_a_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -448,7 +448,7 @@
             label = "WHU_os_comma";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -460,7 +460,7 @@
             label = "WHU_os_u_diaresis";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -472,7 +472,7 @@
             label = "WHU_os_s";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -484,7 +484,7 @@
             label = "WHU_os_bspc";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
@@ -496,7 +496,7 @@
             label = "WHU_os_space";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
-            wait-ms = <13>;
+            wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
