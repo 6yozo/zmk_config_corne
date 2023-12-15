@@ -23,18 +23,6 @@
 #include "layers.h"
 
 / {
-    behaviors {
-    skq: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_KEY_QUICK_RELEASE";
-#binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <1000>;
-            quick-release;
-            ignore-modifiers;
-        };
-    };
-
     macros {
  // wait-ms and tap-ms value
  // ---
@@ -47,7 +35,19 @@
  //
  // Hitting keys close to 50 ms / keypress is humanly possible.
 
-        WHU_os_esc: WHU_os_esc {
+    whu_os_app: whu_os_app {
+            label = "WHU_os_app";
+            compatible = "zmk,behavior-macro-one-param";
+#binding-cells = <1>;
+            wait-ms = <1>;
+            tap-ms = <13>;
+            bindings
+                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
+                , <&macro_tap     &kp K_APP>
+                ;
+        };
+
+    whu_os_esc: whu_os_esc {
             label = "WHU_OS_ESC";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
@@ -59,9 +59,9 @@
                 ;
         };
 
-        WHU_os_tab: WHU_os_tab {
+    whu_os_tab: whu_os_tab {
             label = "WHU_OS_TAB";
-                compatible = "zmk,behavior-macro-one-param";
+            compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <13>;
             tap-ms = <13>;
@@ -71,9 +71,9 @@
                 ;
         };
 
-        WHU_os_ret: WHU_os_ret {
+    whu_os_ret: whu_os_ret {
             label = "WHU_OS_RET";
-                compatible = "zmk,behavior-macro-one-param";
+            compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <13>;
             tap-ms = <13>;
@@ -83,9 +83,9 @@
                 ;
         };
 
-        WHU_os_del: WHU_os_del {
+    whu_os_del: whu_os_del {
             label = "WHU_OS_DEL";
-                compatible = "zmk,behavior-macro-one-param";
+            compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <13>;
             tap-ms = <13>;
@@ -347,8 +347,8 @@
                 ;
         };
 
-        WHU_os_dot: WHU_os_dot {
-            label = "WHU_OS_DOT";
+        whu_os_dot: whu_os_dot {
+            label = "whu_os_dot";
                 compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <13>;
@@ -524,51 +524,6 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
-
-        WHU_os_lg: WHU_os_lg {
-            label = "WHU_OS_LG";
-                compatible = "zmk,behavior-macro";
-#binding-cells = <0>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &skq LGUI>
-                ;
-        };
-
-        WHU_os_la: WHU_os_la {
-            label = "WHU_OS_LA";
-            compatible = "zmk,behavior-macro";
-#binding-cells = <0>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &skq LALT>
-                ;
-        };
-
-        WHU_os_lc: WHU_os_lc {
-            label = "WHU_OS_LC";
-                compatible = "zmk,behavior-macro";
-#binding-cells = <0>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &skq LCTRL>
-                ;
-        };
-
-        WHU_os_ls: WHU_os_ls {
-            label = "WHU_OS_LS";
-                compatible = "zmk,behavior-macro";
-#binding-cells = <0>;
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_tap     &skq LSHFT>
-                ;
-        };
-
 
         WHU_os_caps: WHU_os_caps {
             label = "WHU_OS_CAPS";

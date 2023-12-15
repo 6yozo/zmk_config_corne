@@ -163,34 +163,25 @@
         whu_b_layer { bindings = < BUNYA_DTM(WHU) >; };
         whu_b_mod_left { bindings = < MOD_LEFT(WHU, WHU_BUNYA) >; };
         whu_b_mod_right { bindings = < MOD_RIGHT(WHU, WHU_BUNYA) >; };
+        whu_b_nav_layer { bindings = < NAV(WHU, WHU_BUNYA) >; };
 
-        whu_bunya_nav_layer {
-// WHU_BUNYA-DTM_NAV
-            bindings = <
-    &kp ESC  &none     &none       &kp K_APP               &none         &kp KP_NUMLOCK          &kp INS       &none     &none                 &none      &none      &kp DEL
-    &none    &kp LGUI  &kp LALT    &kp LCTRL               &kp LSHFT     &caps_word              &kp CAPS      &kp LEFT  &kp DOWN              &kp UP     &kp RIGHT  &none
-    &kp TAB  &m_undo   &m_cut_whu  &m_copy_whu             &m_paste_whu  &m_again_whu            &kp LC(BSPC)  &kp HOME  &kp PG_DN             &kp PG_UP  &kp END    &kp RET
-                                   &to WHU_BUNYA_MOD_LEFT  &kp S         &to SYSTEM              &kp BSPC      &kp SPACE &to WHU_BUNYA_MOD_RIGHT
-            >;
-        };
-
-        whu_bunya_num_layer {
+        whu_bunya_num_layer { // TODO put somewhere "&kp KP_NUMLOCK" and creare a numpad layer 
 // WHU_BUNYA-DTM_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
             bindings = <
-    &kp ESC  &kp N6     &kp N7    &kp N8                  &kp N9  &kp CARET            &kp F12    &kp F9     &kp F8                   &kp F7   &kp F6   &kp DEL
-    &none    &kp GRAVE  &kp N1    &kp N2                  &kp N3  &kp HASH             &kp F11    &kp F3     &kp F2                   &kp F1   &kp F10  &none
-    &kp TAB  &kp N4     &kp SLCK  &kp PAUSE_BREAK         &kp N5  &m_star_whu          &kp PSCRN  &kp F5     &kp COMMA                &kp DOT  &kp F4   &kp RET
-                                  &to WHU_BUNYA_MOD_LEFT  &kp S   &to SYSTEM           &kp BSPC   &kp SPACE  &to WHU_BUNYA_MOD_RIGHT
+    &kp ESC    &m_sqt_whu    &m_lt_whu    &m_gt_whu               &m_dqt_whu    &m_under_whu         &none     &kp N9     &kp N8                  &kp N7  &kp DOT     &kp DEL
+    &kp TAB    &m_excl_whu   &kp FSLH     &m_plus_whu             &m_equal_whu  &m_hash_whu          &none     &kp N3     &kp N2                  &kp N1  &kp GRAVE   &none
+    &kp K_APP  &m_caret_whu  &m_fslh_whu  &m_star_whu             &m_bslh_whu   &m_semi_whu          &none     &kp N6     &kp N5                  &kp N4  &kp COMMA   &kp RET
+                                          &to WHU_BUNYA_MOD_LEFT  &kp S         &to SYSTEM           &kp BSPC  &kp SPACE  &to WHU_BUNYA_MOD_RIGHT
             >;
         };
 
-        whu_bunya_sym_layer {
-// WHU_BUNYA-DTM_SYM
+        whu_bunya_fun_layer {
+// WHU_BUNYA-DTM_FUN
             bindings = <
-    &kp ESC  &m_grave_whu          &m_lt_whu    &m_gt_whu               &m_dqt_whu    &kp DOT                  &m_amps_whu   &m_scope_whu  &m_lbkt_whu  &m_rbkt_whu  &m_prcnt_whu  &kp DEL
-    &none    &m_excl_whu           &kp FSLH     &m_plus_whu             &m_equal_whu  &m_hash_whu              &m_pipe_whu   &m_colon_whu  &m_lpar_whu  &m_rpar_whu  &m_qmark_whu  &none
-    &kp TAB  &carethulc_caret_whu  &m_fslh_whu  &m_star_whu             &m_bslh_whu   &m_par_dir_whu           &m_tilde_whu  &m_dllr_whu   &m_lbrc_whu  &m_rbrc_whu  &m_at_whu     &kp RET
-                                              &to WHU_BUNYA_MOD_LEFT  &kp S         &to SYSTEM               &kp BSPC      &kp SPACE     &to WHU_BUNYA_MOD_RIGHT
+   &kp ESC    &m_prcnt_whu  &m_lbkt_whu  &m_rbkt_whu             &m_grave_whu  &m_amps_whu           &kp SLCK        &kp F9     &kp F8                   &kp F7 &kp F12 &kp DEL
+   &kp TAB    &m_qmark_whu  &m_lpar_whu  &m_rpar_whu             &m_colon_whu  &m_pipe_whu           &kp PSCRN       &kp F3     &kp F2                   &kp F1 &kp F10 &none
+   &kp K_APP  &m_at_whu     &m_lbrc_whu  &m_rbrc_whu             &m_dllr_whu   &m_tilde_whu          &kp PAUSE_BREAK &kp F6     &kp F5                   &kp F4 &kp F11 &kp RET
+                                         &to WHU_BUNYA_MOD_LEFT  &kp S         &to SYSTEM            &kp BSPC        &kp SPACE  &to WHU_BUNYA_MOD_RIGHT
             >;
         };
 

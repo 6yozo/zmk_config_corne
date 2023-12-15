@@ -21,13 +21,19 @@
 #include "bunya-dtm-hu.h"
 
 #define MOD_LEFT(PREFIX, BASE) \
- &##PREFIX##_os_esc BASE  &none              &none              &none              &none              &none               &##PREFIX##_os_j BASE        &##PREFIX##_os_k BASE      &##PREFIX##_os_o BASE        &##PREFIX##_os_u BASE        &##PREFIX##_os_dot BASE     &##PREFIX##_os_i_acute BASE \
- &none                    &##PREFIX##_os_lg  &##PREFIX##_os_la  &##PREFIX##_os_lc  &##PREFIX##_os_ls  &none               &##PREFIX##_os_y BASE        &##PREFIX##_os_h BASE      &##PREFIX##_os_a BASE        &##PREFIX##_os_e BASE        &##PREFIX##_os_i BASE       &##PREFIX##_os_o_diaresis BASE \
- &##PREFIX##_os_tab BASE  &to BASE##_SYM     &to BASE##_NUM     &to BASE##_NAV     &to BASE           &none               &##PREFIX##_os_o_acute BASE  &##PREFIX##_os_f BASE      &##PREFIX##_os_e_acute BASE  &##PREFIX##_os_a_acute BASE  &##PREFIX##_os_comma  BASE  &##PREFIX##_os_u_diaresis BASE \
-                                                                &to BASE           &to BASE           &to SYSTEM          &##PREFIX##_os_bspc BASE     &##PREFIX##_os_space BASE  &to BASE##_NAV
+ PREFIX##_OS_ESC(BASE)  &none            &none            &none            &none            &none               PREFIX##_OS_J(BASE)        PREFIX##_OS_K(BASE)      PREFIX##_OS_O(BASE)        PREFIX##_OS_U(BASE)        PREFIX##_OS_DOT(BASE)    PREFIX##_OS_I_ACUTE(BASE) \
+ PREFIX##_OS_TAB(BASE)  PREFIX##_OS_LG   PREFIX##_OS_LA   PREFIX##_OS_LC   PREFIX##_OS_LS   &none               PREFIX##_OS_Y(BASE)        PREFIX##_OS_H(BASE)      PREFIX##_OS_A(BASE)        PREFIX##_OS_E(BASE)        PREFIX##_OS_I(BASE)      PREFIX##_OS_O_DIARESIS(BASE) \
+ PREFIX##_OS_APP(BASE)  &none            &none            &to BASE##_NUM   &to BASE##_FUN   &none               PREFIX##_OS_O_ACUTE(BASE)  PREFIX##_OS_F(BASE)      PREFIX##_OS_E_ACUTE(BASE)  PREFIX##_OS_A_ACUTE(BASE)  PREFIX##_OS_COMMA(BASE)  PREFIX##_OS_U_DIARESIS(BASE) \
+                                                          &to BASE         &to BASE         &to SYSTEM          &PREFIX##_os_bspc BASE     &PREFIX##_os_space BASE  &to BASE##_NAV
 
 #define MOD_RIGHT(PREFIX, BASE) \
- &##PREFIX##_os_u_acute BASE   &##PREFIX##_os_z BASE  &##PREFIX##_os_l BASE  &##PREFIX##_os_d BASE  &##PREFIX##_os_p BASE  &##PREFIX##_os_v BASE          &none    &none              &none              &none              &none              &##PREFIX##_os_del BASE \
- &##PREFIX##_os_o_dacute BASE  &##PREFIX##_os_n BASE  &##PREFIX##_os_r BASE  &##PREFIX##_os_t BASE  &##PREFIX##_os_c BASE  &##PREFIX##_os_b BASE          &none    &##PREFIX##_os_ls  &##PREFIX##_os_lc  &##PREFIX##_os_la  &##PREFIX##_os_lg  &none \
- &##PREFIX##_os_u_dacute BASE  &##PREFIX##_os_x BASE  &##PREFIX##_os_q BASE  &##PREFIX##_os_m BASE  &##PREFIX##_os_g BASE  &##PREFIX##_os_w BASE          &none    &to BASE           &to BASE##_NAV     &to BASE##_NUM     &to BASE##_SYM     &##PREFIX##_os_ret BASE \
-                                                                             &to BASE##_NAV         &##PREFIX##_os_s BASE  &to SYSTEM                     &to BASE &to BASE           &to BASE
+ &PREFIX##_os_u_acute BASE   &PREFIX##_os_z BASE  &PREFIX##_os_l BASE  &PREFIX##_os_d BASE  &PREFIX##_os_p BASE  &PREFIX##_os_v BASE          &none     &none            &none            &none            &none            PREFIX##_OS_DEL(BASE) \
+ &PREFIX##_os_o_dacute BASE  &PREFIX##_os_n BASE  &PREFIX##_os_r BASE  &PREFIX##_os_t BASE  &PREFIX##_os_c BASE  &PREFIX##_os_b BASE          &none     PREFIX##_OS_LS   PREFIX##_OS_LC   PREFIX##_OS_LA   PREFIX##_OS_LG  &none \
+ &PREFIX##_os_u_dacute BASE  &PREFIX##_os_x BASE  &PREFIX##_os_q BASE  &PREFIX##_os_m BASE  &PREFIX##_os_g BASE  &PREFIX##_os_w BASE          &none     &to BASE##_FUN   &to BASE##_NUM   &none            &none            PREFIX##_OS_RET(BASE) \
+                                                                       &to BASE##_NAV       &PREFIX##_os_s BASE  &to SYSTEM                   &to BASE  &to BASE         &to BASE
+
+#define NAV(PREFIX, BASE) \
+ &kp ESC    &kt LGUI        &kt LALT       &kt LCTRL            &kt LSHFT        &none                   &kp INS       &none      &none                 &none      &none      &kp DEL \
+ &kp TAB    &kp LGUI        &kp LALT       &kp LCTRL            &kp LSHFT        &caps_word              &kp CAPS      &kp LEFT   &kp DOWN              &kp UP     &kp RIGHT  &none   \
+ &kp K_APP  PREFIX##_UNDO   PREFIX##_CUT   PREFIX##_COPY        PREFIX##_PASTE   PREFIX##_AGAIN          &kp LC(BSPC)  &kp HOME   &kp PG_DN             &kp PG_UP  &kp END    &kp RET \
+                                           &to BASE##_MOD_LEFT  &kp S            &to SYSTEM              &kp BSPC      &kp SPACE  &to BASE##_MOD_RIGHT

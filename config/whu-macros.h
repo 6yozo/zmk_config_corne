@@ -47,55 +47,55 @@
  //
  // Hitting keys close to 50 ms / keypress is humanly possible.
 
-        ZMK_MACRO(m_again_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LCTRL>
-                , <&macro_tap     &kp Y>
-                , <&macro_release &kp LCTRL>
-                ;
-        )
+        ZMK_MACRO(whu_again,
+                  wait-ms = <13>;
+                  tap-ms = <13>;
+                  bindings
+                  = <&macro_press   &kp LCTRL>
+                  , <&macro_tap     &kp Z>
+                  , <&macro_release &kp LCTRL>
+                  ;
+                  )
 
-        ZMK_MACRO(m_paste_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LCTRL>
-                , <&macro_tap     &kp V>
-                , <&macro_release &kp LCTRL>
-                ;
-        )
+        ZMK_MACRO(whu_paste,
+                  wait-ms = <13>;
+                  tap-ms = <13>;
+                  bindings
+                  = <&macro_press   &kp LCTRL>
+                  , <&macro_tap     &kp V>
+                  , <&macro_release &kp LCTRL>
+                  ;
+                  )
 
-        ZMK_MACRO(m_copy_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LCTRL>
-                , <&macro_tap     &kp C>
-                , <&macro_release &kp LCTRL>
-                ;
-        )
+        ZMK_MACRO(whu_copy,
+                  wait-ms = <13>;
+                  tap-ms = <13>;
+                  bindings
+                  = <&macro_press   &kp LCTRL>
+                  , <&macro_tap     &kp C>
+                  , <&macro_release &kp LCTRL>
+                  ;
+                  )
 
-        ZMK_MACRO(m_cut_whu,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LCTRL>
-                , <&macro_tap     &kp X>
-                , <&macro_release &kp LCTRL>
-                ;
-        )
+        ZMK_MACRO(whu_cut,
+                  wait-ms = <13>;
+                  tap-ms = <13>;
+                  bindings
+                  = <&macro_press   &kp LCTRL>
+                  , <&macro_tap     &kp X>
+                  , <&macro_release &kp LCTRL>
+                  ;
+                  )
 
-        ZMK_MACRO(m_undo,
-            wait-ms = <13>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_press   &kp LCTRL>
-                , <&macro_tap     &kp Y>
-                , <&macro_release &kp LCTRL>
-                ;
-        )
+        ZMK_MACRO(whu_undo,
+                  wait-ms = <13>;
+                  tap-ms = <13>;
+                  bindings
+                  = <&macro_press   &kp LCTRL>
+                  , <&macro_tap     &kp Y>
+                  , <&macro_release &kp LCTRL>
+                  ;
+                  )
 
         ZMK_MACRO(m_e_acute,
             wait-ms = <13>;

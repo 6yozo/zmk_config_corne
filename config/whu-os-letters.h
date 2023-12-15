@@ -48,15 +48,15 @@
                 ;
         };
 
-    WHU_os_y: WHU_os_y {
-            label = "WHU_os_y";
+    WHU_os_z: WHU_os_z {
+            label = "WHU_os_z";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &kp Z>
+                , <&macro_tap     &kp Y>
                 ;
         };
 
@@ -108,8 +108,8 @@
                 ;
         };
 
-    WHU_os_j: WHU_os_j {
-            label = "WHU_os_j";
+    whu_os_j: whu_os_j {
+            label = "whu_os_j";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -120,8 +120,8 @@
                 ;
         };
 
-    WHU_os_k: WHU_os_k {
-            label = "WHU_os_k";
+    whu_os_k: whu_os_k {
+            label = "whu_os_k";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -132,8 +132,8 @@
                 ;
         };
 
-    WHU_os_o: WHU_os_o {
-            label = "WHU_os_o";
+    whu_os_o: whu_os_o {
+            label = "whu_os_o";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -144,8 +144,8 @@
                 ;
         };
 
-    WHU_os_u: WHU_os_u {
-            label = "WHU_os_u";
+    whu_os_u: whu_os_u {
+            label = "whu_os_u";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -156,19 +156,7 @@
                 ;
         };
 
-    WHU_os_dot: WHU_os_dot {
-            label = "WHU_os_dot";
-            compatible = "zmk,behavior-macro-one-param";
-#binding-cells = <1>;
-            wait-ms = <1>;
-            tap-ms = <13>;
-            bindings
-                = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &kp DOT>
-                ;
-        };
-
-    WHU_os_i_acute: WHU_os_i_acute {
+    whu_os_i_acute: whu_os_i_acute {
             label = "WHU_os_i_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
@@ -252,20 +240,20 @@
                 ;
         };
 
-    WHU_os_z: WHU_os_z {
-            label = "WHU_os_z";
+    whu_os_y: whu_os_y {
+            label = "whu_os_y";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
             tap-ms = <13>;
             bindings
                 = <&macro_param_1to1>, <&to MACRO_PLACEHOLDER>
-                , <&macro_tap     &kp Y>
+                , <&macro_tap     &kp Z>
                 ;
         };
 
-    WHU_os_h: WHU_os_h {
-            label = "WHU_os_h";
+    whu_os_h: whu_os_h {
+            label = "whu_os_h";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -276,8 +264,8 @@
                 ;
         };
 
-    WHU_os_a: WHU_os_a {
-            label = "WHU_os_a";
+    whu_os_a: whu_os_a {
+            label = "whu_os_a";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -288,8 +276,8 @@
                 ;
         };
 
-    WHU_os_e: WHU_os_e {
-            label = "WHU_os_e";
+    whu_os_e: whu_os_e {
+            label = "whu_os_e";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -300,8 +288,8 @@
                 ;
         };
 
-    WHU_os_i: WHU_os_i {
-            label = "WHU_os_i";
+    whu_os_i: whu_os_i {
+            label = "whu_os_i";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -312,7 +300,7 @@
                 ;
         };
 
-    WHU_os_o_diaresis: WHU_os_o_diaresis {
+    whu_os_o_diaresis: whu_os_o_diaresis {
             label = "WHU_os_o_diaresis";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
@@ -396,8 +384,8 @@
                 ;
         };
 
-    WHU_os_o_acute: WHU_os_o_acute {
-            label = "WHU_os_o_acute";
+    whu_os_o_acute: whu_os_o_acute {
+            label = "whu_os_o_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -408,8 +396,8 @@
                 ;
         };
 
-    WHU_os_f: WHU_os_f {
-            label = "WHU_os_f";
+    whu_os_f: whu_os_f {
+            label = "whu_os_f";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -420,8 +408,8 @@
                 ;
         };
 
-    WHU_os_e_acute: WHU_os_e_acute {
-            label = "WHU_os_e_acute";
+    whu_os_e_acute: whu_os_e_acute {
+            label = "whu_os_e_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -432,8 +420,8 @@
                 ;
         };
 
-    WHU_os_a_acute: WHU_os_a_acute {
-            label = "WHU_os_a_acute";
+    whu_os_a_acute: whu_os_a_acute {
+            label = "whu_os_a_acute";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -444,8 +432,8 @@
                 ;
         };
 
-    WHU_os_comma: WHU_os_comma {
-            label = "WHU_os_comma";
+    whu_os_comma: whu_os_comma {
+            label = "whu_os_comma";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
@@ -456,8 +444,8 @@
                 ;
         };
 
-    WHU_os_u_diaresis: WHU_os_u_diaresis {
-            label = "WHU_os_u_diaresis";
+    whu_os_u_diaresis: whu_os_u_diaresis {
+            label = "whu_os_u_diaresis";
             compatible = "zmk,behavior-macro-one-param";
 #binding-cells = <1>;
             wait-ms = <1>;
