@@ -12,13 +12,13 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #include "timing.h"
-#include "accents.h"
 #include "layers.h"
 #include "punctuation_en.h"
 #include "punctuation_hu.h"
-#include "macros_whu.h"
-#include "macros_wen.h"
+#include "whu-macros.h"
 #include "mhu.h"
+#include "bunya-dtm-hu.h"
+#include "sequitap.h"
 
 // Left Side
 #define TIL  3 // Top Index finger Left
@@ -49,14 +49,14 @@
 #define ITR 38 // Inner Thumb Right
 
 / {
-    combos {
+    combos { // TODO Remove all combos if possible
         compatible = "zmk,combos";
 
         combo_to_system {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <2 3 4>;
             bindings = <&to SYSTEM >;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
 
         combo_globe_right {
@@ -75,246 +75,74 @@
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <40 19>;
             bindings = <&skq LSHFT>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_shft_left {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <37 16>;
             bindings = <&skq LSHFT>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_ctrl_right {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <40 20>;
             bindings = <&skq LCTRL>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_ctrl_left {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <37 15>;
             bindings = <&skq LCTRL>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_alt_right {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <40 21>;
             bindings = <&skq LALT>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_alt_left {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <37 14>;
             bindings = <&skq LALT>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         }; 
         combo_gui_right {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <40 22>;
             bindings = <&skq LGUI>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_gui_left {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <37 13>;
             bindings = <&skq LGUI>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
-        };
-
-        combo_to_wen_base_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 16>;
-            bindings = <&to WEN_BASE>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_base_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 19>;
-            bindings = <&to WEN_BASE>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_nav_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 15>;
-            bindings = <&to WEN_NAV>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_nav_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 20>;
-            bindings = <&to WEN_NAV>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_num_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 14>;
-            bindings = <&to WEN_NUM>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_num_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 21>;
-            bindings = <&to WEN_NUM>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_sym_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 13>;
-            bindings = <&to WEN_SYM>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_sym_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 22>;
-            bindings = <&to WEN_SYM>;
-            layers = <WEN_LAYER_SET>;
-        };
-
-        combo_to_wen_diaresis_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 28>;
-            bindings = <&to WEN_DL>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_diaresis_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 31>;
-            bindings = <&to WEN_DL>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_acute_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 27>;
-            bindings = <&to WEN_AL>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_acute_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 32>;
-            bindings = <&to WEN_AL>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_dacute_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 26>;
-            bindings = <&to WEN_DAL>;
-            layers = <WEN_LAYER_SET>;
-        };
-        combo_to_wen_dacute_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 33>;
-            bindings = <&to WEN_DAL>;
-            layers = <WEN_LAYER_SET>;
-        };
-
-        combo_to_whu_base_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 16>;
-            bindings = <&to WHU_BASE>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_base_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 19>;
-            bindings = <&to WHU_BASE>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_nav_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 15>;
-            bindings = <&to WHU_NAV>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_nav_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 20>;
-            bindings = <&to WHU_NAV>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_num_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 14>;
-            bindings = <&to WHU_NUM>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_num_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 21>;
-            bindings = <&to WHU_NUM>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_sym_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 13>;
-            bindings = <&to WHU_SYM>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_sym_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 22>;
-            bindings = <&to WHU_SYM>;
-            layers = <WHU_LAYER_SET>;
-        };
-
-        combo_to_whu_diaresis_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 28>;
-            bindings = <&to WHU_DL>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_diaresis_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 31>;
-            bindings = <&to WHU_DL>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_acute_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 27>;
-            bindings = <&to WHU_AL>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_acute_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 32>;
-            bindings = <&to WHU_AL>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_dacute_left {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <36 26>;
-            bindings = <&to WHU_DAL>;
-            layers = <WHU_LAYER_SET>;
-        };
-        combo_to_whu_dacute_right {
-            timeout-ms = <TIMEOUT_MS>;
-            key-positions = <41 33>;
-            bindings = <&to WHU_DAL>;
-            layers = <WHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         
         combo_enter_right {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <32 33>;
             bindings = <&kp RET>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_esc_left {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <26 27>;
             bindings = <&kp ESC>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_tab_left {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <14 15>;
             bindings = <&kp TAB>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
         combo_del_right {
             timeout-ms = <TIMEOUT_MS>;
             key-positions = <20 21>;
             bindings = <&kp DEL>;
-            layers = <WEN_LAYER_SET WHU_LAYER_SET MHU_LAYER_SET>;
+            layers = <MHU_LAYER_SET>;
         };
     };
 
@@ -325,209 +153,35 @@
 // SYSTEM
             bindings = <
     &none    &none       &none  &none         &to WHU_BUNYA  &none             &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI    &none
-    &none    &bt BT_CLR  &none  &to MHU_BASE  &to WHU_BASE   &none             &kp EP_TOG       &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT         &none
-    &none    &none       &none  &none         &to WEN_BASE   &none             &out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3       &none
+    &none    &bt BT_CLR  &none  &to MHU_BASE  &none          &none             &kp EP_TOG       &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT         &none
+    &none    &none       &none  &none         &none          &none             &out OUT_TOG     &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3       &none
                                 &key_repeat   &kp SPACE      &kp SEMI          &kp MINUS        &kp BSPC         &star_excl
             >;
         };
 
-        wen_base_layer {
-// COLEMAK-DH
-            bindings = <
-    &none    &kp Q   &kp W        &kp F      &kp P     &kp B           &kp J   &kp L      &kp U        &kp Y       &kp SQT     &none
-    &none    &kp A   &kp R        &kp S      &kp T     &kp G           &kp M   &kp N      &kp E        &kp I       &kp O       &none
-    &none    &kp Z   &kp X        &kp C      &kp D     &kp V           &kp K   &kp H      &comma_lpar  &dot_rpar   &kp FSLH    &none
-                     &key_repeat  &kp SPACE  &kp SEMI                          &kp MINUS  &kp BSPC     &star_excl
-            >;
-        };
-
-        wen_nav_layer {
-// WEN_NAV
-            bindings = <
-    &none    &none       &none          &kp K_APP    &none         &kp KP_NUMLOCK          &kp INS       &none      &none      &none       &none        &none
-    &none    &kp LGUI    &kp LALT       &kp LCTRL    &kp LSHFT     &caps_word              &kp CAPS      &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT    &none
-    &none    &m_undo     &m_cut_wen     &m_copy_wen  &m_paste_wen  &m_again_wen            &kp LC(BSPC)  &kp HOME   &kp PG_DN  &kp PG_UP   &kp END      &none
-                         &key_repeat    &kp SPACE    &kp SEMI                                            &kp MINUS  &kp BSPC   &star_excl
-            >;
-        };
-
-        wen_num_layer {
-// WEN_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
-            bindings = <
-    &none    &kp N6    &kp N7       &kp N8           &kp N9    &kp FSLH          &kp F12    &kp F9     &kp F8     &kp F7      &kp F6     &none
-    &none    &kp N0    &kp N1       &kp N2           &kp N3    &kp PLUS          &kp F11    &kp F3     &kp F2     &kp F1      &kp F10    &none         
-    &none    &kp N4    &kp SLCK     &kp PAUSE_BREAK  &kp N5    &kp STAR          &kp PSCRN  &kp F5     &kp COMMA  &kp DOT     &kp F4     &none      
-                       &key_repeat  &kp SPACE        &kp SEMI                               &kp MINUS  &kp BSPC   &star_excl
-            >;
-        };
-        
-        wen_sym_layer {
-// WEN_SYM
-            bindings = <
-    &none    &kp GRAVE  &kp LT       &kp GT     &kp DQT    &kp DOT            &kp AMPS   &m_scope   &kp LBKT  &kp RBKT    &kp PRCNT    &none
-    &none    &kp EXCL   &kp MINUS    &kp PLUS   &kp EQUAL  &kp HASH           &kp PIPE   &kp COLON  &kp LPAR  &kp RPAR    &kp QMARK    &none
-    &none    &kp CARET  &kp FSLH     &kp STAR   &kp BSLH   &m_par_dir         &kp TILDE  &kp DLLR   &kp LBRC  &kp RBRC    &kp AT       &none
-                        &key_repeat  &kp SPACE  &kp SEMI                                 &kp MINUS  &kp BSPC  &star_excl
-            >;
-        };
-
-        wen_acute_layer {
-// ACUTE LAYER
-            bindings = <
-    &none    &to WEN_BASE     &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_acute_to_wen  &to WEN_BASE     &to WEN_BASE       &none
-    &none    &a_acute_to_wen  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &e_acute_to_wen  &i_acute_to_wen  &o_acute_to_wen    &none
-    &none    &to WEN_BASE     &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE     &to WEN_BASE     &to WEN_BASE       &none
-                              &to WEN_BASE  &to WEN_BASE  &to WEN_BASE                                       &to WEN_BASE  &to WEN_BASE     &to WEN_BASE
-          >;
-        };
-
-        wen_dacute_layer {
-// DOUBLE ACUTE LAYER
-            bindings = <
-    &none    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_dacute_to_wen  &to WEN_BASE  &to WEN_BASE        &none
-    &none    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE      &to WEN_BASE  &o_dacute_to_wen    &none
-    &none    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE      &to WEN_BASE  &to WEN_BASE        &none
-                           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE                                       &to WEN_BASE  &to WEN_BASE      &to WEN_BASE
-          >;
-        };
-
-        wen_diaresis_layer {
-// DIARESIS LAYER
-            bindings = <
-    &none    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &u_diaresis_to_wen  &to WEN_BASE  &to WEN_BASE        &none
-    &none    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE        &to WEN_BASE  &o_diaresis_to_wen  &none
-    &none    &to WEN_BASE    &to WEN_BASE  &to WEN_BASE  &to WEN_BASE  &to WEN_BASE           &to WEN_BASE  &to WEN_BASE  &to WEN_BASE        &to WEN_BASE  &to WEN_BASE        &none
-                             &to WEN_BASE  &to WEN_BASE  &to WEN_BASE                                       &to WEN_BASE  &to WEN_BASE        &to WEN_BASE
-          >;
-        };
-
-        whu_base_layer {
-// COLEMAK-DH
-            bindings = <
-    &none    &kp Q   &kp W        &kp F      &kp P            &kp B           &kp J   &kp L     &kp U            &kp Z           &sqt_dqt_whu       &none
-    &none    &kp A   &kp R        &kp S      &kp T            &kp G           &kp M   &kp N     &kp E            &kp I           &kp O              &none
-    &none    &kp Y   &kp X        &kp C      &kp D            &kp V           &kp K   &kp H     &comma_lpar_whu  &dot_rpar_whu   &fslh_qmark_whu    &none
-                     &key_repeat  &kp SPACE  &semi_colon_whu                          &kp FSLH  &kp BSPC         &star_excl_whu
-            >;
-        };
-
-        whu_nav_layer {
-// WHU_NAV
-            bindings = <
-    &none    &none       &none          &kp K_APP    &none            &kp KP_NUMLOCK          &kp INS       &none             &none      &none           &none        &none
-    &none    &kp LGUI    &kp LALT       &kp LCTRL    &kp LSHFT        &caps_word              &kp CAPS      &kp LEFT          &kp DOWN   &kp UP          &kp RIGHT    &none
-    &none    &m_undo     &m_cut_whu     &m_copy_whu  &m_paste_whu     &m_again_whu            &kp LC(BSPC)  &kp HOME          &kp PG_DN  &kp PG_UP       &kp END      &none
-                         &key_repeat    &kp SPACE    &semi_colon_whu                                        &minus_under_whu  &kp BSPC   &star_excl_whu
-            >;
-        };
-
-        whu_num_layer {
-// WHU_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
-            bindings = <
-    &none    &kp N6     &kp N7       &kp N8           &kp N9           &kp CARET            &kp F12    &kp F9            &kp F8     &kp F7          &kp F6     &none
-    &none    &kp GRAVE  &kp N1       &kp N2           &kp N3           &kp HASH             &kp F11    &kp F3            &kp F2     &kp F1          &kp F10    &none
-    &none    &kp N4     &kp SLCK     &kp PAUSE_BREAK  &kp N5           &m_star_whu          &kp PSCRN  &kp F5            &kp COMMA  &kp DOT         &kp F4     &none
-                        &key_repeat  &kp SPACE        &semi_colon_whu                                  &minus_under_whu  &kp BSPC   &star_excl_whu
-            >;
-        };
-        
-        whu_sym_layer {
-// WHU_SYM
-            bindings = <
-    &none    &m_grave_whu          &m_lt_whu    &m_gt_whu    &m_dqt_whu     &kp DOT                 &m_amps_whu   &m_scope_whu      &m_lbkt_whu  &m_rbkt_whu     &m_prcnt_whu    &none
-    &none    &m_excl_whu           &kp FSLH     &m_plus_whu  &m_equal_whu   &m_hash_whu             &m_pipe_whu   &m_colon_whu      &m_lpar_whu  &m_rpar_whu     &m_qmark_whu    &none
-    &none    &carethulc_caret_whu  &m_fslh_whu  &m_star_whu  &m_bslh_whu    &m_par_dir_whu          &m_tilde_whu  &m_dllr_whu       &m_lbrc_whu  &m_rbrc_whu     &m_at_whu       &none
-                                   &key_repeat  &kp SPACE  &semi_colon_whu                                        &minus_under_whu  &kp BSPC     &star_excl_whu
-            >;
-        };
-
-        whu_acute_layer {
-// ACUTE LAYER
-            bindings = <
-    &none  &to WHU_BASE       &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_acute_to_whu  &to WHU_BASE       &to WHU_BASE       &none
-    &none  &m_a_acute_to_whu  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_e_acute_to_whu  &m_i_acute_to_whu  &m_o_acute_to_whu  &none  
-    &none  &to WHU_BASE       &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE       &to WHU_BASE       &to WHU_BASE       &none
-                              &to WHU_BASE  &to WHU_BASE  &to WHU_BASE                                       &to WHU_BASE  &to WHU_BASE       &to WHU_BASE
-          >;
-        };
-
-        whu_dacute_layer {
-// DOUBLE ACUTE LAYER
-            bindings = <
-    &none    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_dacute_to_whu  &to WHU_BASE  &to WHU_BASE          &none
-    &none    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE        &to WHU_BASE  &m_o_dacute_to_whu    &none
-    &none    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE        &to WHU_BASE  &to WHU_BASE          &none
-                           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE                                       &to WHU_BASE  &to WHU_BASE        &to WHU_BASE
-          >;
-        };
-
-        whu_diaresis_layer {
-// DIARESIS LAYER
-            bindings = <
-    &none  &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &m_u_diaresis_to_whu  &to WHU_BASE  &to WHU_BASE          &none
-    &none  &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE          &to WHU_BASE  &m_o_diaresis_to_whu  &none
-    &none  &to WHU_BASE    &to WHU_BASE  &to WHU_BASE  &to WHU_BASE  &to WHU_BASE           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE          &to WHU_BASE  &to WHU_BASE          &none
-                           &to WHU_BASE  &to WHU_BASE  &to WHU_BASE                                       &to WHU_BASE  &to WHU_BASE          &to WHU_BASE
-          >;
-        };
-
-        whu_bunya_base_layer {
 // BUNYA-DTM
-            bindings = <
-    &m_u_acute   &kp Y  &kp L  &kp D                     &kp P  &kp V               &kp J       &kp K      &kp O                      &kp U       &kp DOT    &m_i_acute
-    &m_o_dacute  &kp N  &kp R  &kp T                     &kp C  &kp B               &kp Z       &kp H      &kp A                      &kp E       &kp I      &m_o_diaresis
-    &m_u_dacute  &kp X  &kp Q  &kp M                     &kp G  &kp W               &m_o_acute  &kp F      &m_e_acute                 &m_a_acute  &kp COMMA  &m_u_diaresis
-                               &to WHU_BUNYA_PUNCT_LEFT  &kp S  &to SYSTEM          &kp BSPC    &kp SPACE  &to WHU_BUNYA_PUNCT_RIGHT
-          >;
-        };
+        whu_b_layer { bindings = < BUNYA_DTM(WHU) >; };
+        whu_b_mod_left { bindings = < MOD_LEFT(WHU, WHU_BUNYA) >; };
+        whu_b_mod_right { bindings = < MOD_RIGHT(WHU, WHU_BUNYA) >; };
+        whu_b_nav_layer { bindings = < NAV(WHU, WHU_BUNYA) >; };
 
-        whu_bunya_punct_left {
-// WHU_BUNYA_PUNCT_LEFT
+        whu_bunya_num_layer { // TODO put somewhere "&kp KP_NUMLOCK" and creare a numpad layer 
+// WHU_BUNYA-DTM_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
             bindings = <
-    &to WHU_BUNYA  &whu_b_os_la_lc_ls   &whu_b_os_lg_lc_ls  &whu_b_os_lg_la_ls  &whu_b_os_lg_la_lc  &whu_b_os_lg_la          &whu_b_os_amps   &whu_b_os_semi   &whu_b_os_lbkt  &whu_b_os_rbkt  &whu_b_os_prcnt  &to WHU_BUNYA
-    &to WHU_BUNYA  &whu_b_os_lg         &whu_b_os_la        &whu_b_os_lc        &whu_b_os_ls        &whu_b_os_lg_ls          &whu_b_os_pipe   &whu_b_os_colon  &whu_b_os_lpar  &whu_b_os_rpar  &whu_b_os_qmark  &to WHU_BUNYA
-    &to WHU_BUNYA  &whu_b_os_la_ls      &to WHU_BUNYA_NAV   &to WHU_BUNYA       &whu_b_os_la_lc     &whu_b_os_lg_lc          &whu_b_os_tilde  &whu_b_os_dllr   &whu_b_os_lbrc  &whu_b_os_rbrc  &whu_b_os_at     &to WHU_BUNYA
-                                                            &to WHU_BUNYA       &to WHU_BUNYA       &to SYSTEM               &whu_b_os_lc_ls  &whu_b_os_ret    &whu_b_os_del
-            >;
-        };
-        
-        whu_bunya_punct_right {
-// WHU_BUNYA_PUNCT_RIGHT
-            bindings = <
-    &to WHU_BUNYA  &whu_b_os_sqt              &whu_b_os_lt     &whu_b_os_gt    &whu_b_os_dqt    &whu_b_os_dot            &whu_b_os_lg_la  &whu_b_os_lg_la_lc  &whu_b_os_lg_la_ls  &whu_b_os_lg_lc_ls  &whu_b_os_la_lc_ls  &to WHU_BUNYA
-    &to WHU_BUNYA  &whu_b_os_excl             &whu_b_os_minus  &whu_b_os_plus  &whu_b_os_equal  &whu_b_os_hash           &whu_b_os_lg_ls  &whu_b_os_ls        &whu_b_os_lc        &whu_b_os_la        &whu_b_os_lg        &to WHU_BUNYA
-    &to WHU_BUNYA  &whu_b_os_carethulc_caret  &whu_b_os_fslh   &whu_b_os_star  &whu_b_os_bslh   &whu_b_os_under          &whu_b_os_lg_lc  &whu_b_os_la_lc     &to WHU_BUNYA_NUM   &to WHU_BUNYA_SYM   &whu_b_os_la_ls     &to WHU_BUNYA
-                                                               &whu_b_os_esc   &whu_b_os_tab    &whu_b_os_lc_ls          &to WHU_BUNYA    &whu_b_os_grave     &to WHU_BUNYA
+    &kp ESC    &m_sqt_whu    &m_lt_whu    &m_gt_whu               &m_dqt_whu    &m_under_whu         &none     &kp N9     &kp N8                  &kp N7  &kp DOT     &kp DEL
+    &kp TAB    &m_excl_whu   &kp FSLH     &m_plus_whu             &m_equal_whu  &m_hash_whu          &none     &kp N3     &kp N2                  &kp N1  &kp GRAVE   &none
+    &kp K_APP  &m_caret_whu  &m_fslh_whu  &m_star_whu             &m_bslh_whu   &m_semi_whu          &none     &kp N6     &kp N5                  &kp N4  &kp COMMA   &kp RET
+                                          &to WHU_BUNYA_MOD_LEFT  &kp S         &to SYSTEM           &kp BSPC  &kp SPACE  &to WHU_BUNYA_MOD_RIGHT
             >;
         };
 
-        whu_bunya_nav_layer {
-// WHU_BUNYA_NAV
+        whu_bunya_fun_layer {
+// WHU_BUNYA-DTM_FUN
             bindings = <
-    &none  &none     &none       &kp K_APP                 &none         &kp KP_NUMLOCK          &kp INS       &kp DEL   &kp RET                    &kp TAB    &kp ESC    &none
-    &none  &kp LGUI  &kp LALT    &kp LCTRL                 &kp LSHFT     &caps_word              &kp CAPS      &kp LEFT  &kp DOWN                   &kp UP     &kp RIGHT  &none
-    &none  &m_undo   &m_cut_whu  &m_copy_whu               &m_paste_whu  &m_again_whu            &kp LC(BSPC)  &kp HOME  &kp PG_DN                  &kp PG_UP  &kp END    &none
-                                 &to WHU_BUNYA_PUNCT_LEFT  &kp S         &to SYSTEM              &kp BSPC      &kp SPACE &to WHU_BUNYA_PUNCT_RIGHT
-            >;
-        };
-
-        whu_bunya_num_layer {
-// WHU_BUNYA_NUM, KP_DOT would be better here instad of DOT, but num lock state interferes with KP_DOT.
-            bindings = <
-    &none    &kp N6     &kp N7    &kp N8                    &kp N9  &kp CARET            &kp F12    &kp F9     &kp F8                     &kp F7   &kp F6   &none
-    &none    &kp GRAVE  &kp N1    &kp N2                    &kp N3  &kp HASH             &kp F11    &kp F3     &kp F2                     &kp F1   &kp F10  &none
-    &none    &kp N4     &kp SLCK  &kp PAUSE_BREAK           &kp N5  &m_star_whu          &kp PSCRN  &kp F5     &kp COMMA                  &kp DOT  &kp F4   &none
-                                  &to WHU_BUNYA_PUNCT_LEFT  &kp S   &to SYSTEM           &kp BSPC   &kp SPACE  &to WHU_BUNYA_PUNCT_RIGHT
-            >;
-        };
-        
-        whu_bunya_sym_layer {
-// WHU_BUNYA_SYM
-            bindings = <
-    &none  &m_grave_whu          &m_lt_whu    &m_gt_whu                 &m_dqt_whu    &kp DOT                  &m_amps_whu   &m_scope_whu  &m_lbkt_whu  &m_rbkt_whu  &m_prcnt_whu  &none
-    &none  &m_excl_whu           &kp FSLH     &m_plus_whu               &m_equal_whu  &m_hash_whu              &m_pipe_whu   &m_colon_whu  &m_lpar_whu  &m_rpar_whu  &m_qmark_whu  &none
-    &none  &carethulc_caret_whu  &m_fslh_whu  &m_star_whu               &m_bslh_whu   &m_par_dir_whu           &m_tilde_whu  &m_dllr_whu   &m_lbrc_whu  &m_rbrc_whu  &m_at_whu     &none
-                                              &to WHU_BUNYA_PUNCT_LEFT  &kp S         &to SYSTEM               &kp BSPC      &kp SPACE     &to WHU_BUNYA_PUNCT_RIGHT
+   &kp ESC    &m_prcnt_whu  &m_lbkt_whu  &m_rbkt_whu             &m_grave_whu  &m_amps_whu           &kp SLCK        &kp F9     &kp F8                   &kp F7 &kp F12 &kp DEL
+   &kp TAB    &m_qmark_whu  &m_lpar_whu  &m_rpar_whu             &m_colon_whu  &m_pipe_whu           &kp PSCRN       &kp F3     &kp F2                   &kp F1 &kp F10 &none
+   &kp K_APP  &m_at_whu     &m_lbrc_whu  &m_rbrc_whu             &m_dllr_whu   &m_tilde_whu          &kp PAUSE_BREAK &kp F6     &kp F5                   &kp F4 &kp F11 &kp RET
+                                         &to WHU_BUNYA_MOD_LEFT  &kp S         &to SYSTEM            &kp BSPC        &kp SPACE  &to WHU_BUNYA_MOD_RIGHT
             >;
         };
 
@@ -587,9 +241,10 @@
     &none    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &m_u_dacute_to_mhu  &to MHU_BASE  &to MHU_BASE        &none
     &none    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE        &to MHU_BASE  &m_o_dacute_to_mhu  &none
     &none    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE        &to MHU_BASE  &to MHU_BASE        &none
-                           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE                                       &to MHU_BASE  &to MHU_BASE        &to MHU_BASE
+                                        &to MHU_BASE  &to MHU_BASE  &to MHU_BASE                                       &to MHU_BASE  &to MHU_BASE        &to MHU_BASE
           >;                                                                                                                                                                    
         };
+/*
 
         mhu_diaresis_layer {
 // DIARESIS LAYER
@@ -599,7 +254,7 @@
     &none  &to MHU_BASE    &to MHU_BASE  &to MHU_BASE  &to MHU_BASE  &to MHU_BASE           &to MHU_BASE  &to MHU_BASE  &to MHU_BASE          &to MHU_BASE  &to MHU_BASE          &none
                            &to MHU_BASE  &to MHU_BASE  &to MHU_BASE                                       &to MHU_BASE  &to MHU_BASE          &to MHU_BASE
           >;
-        };
+        };*/
     };
 };
 

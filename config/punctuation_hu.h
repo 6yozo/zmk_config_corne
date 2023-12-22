@@ -20,7 +20,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#include "macros_whu.h"
+#include "whu-macros.h"
 
 / {
     behaviors {
